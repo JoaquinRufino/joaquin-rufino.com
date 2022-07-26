@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/icon/jr.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <title>JoaquinRufino-contacto</title>
+</head>
+<body>
+    
+    <header>
+        
+        <a class="font" href="./index.html">Joaquin Rufino</a>
+        
+        <nav class="navbar">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../pages/libros.html">Libros</a></li>
+                <li><a href="../pages/blog.html">Blog</a></li>
+                <li><a href="../pages/autor.html">Autor</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+            
+        <main>
+            <section class="section-contacto">
+                <article class="article-contacto">
+                    <h3 class="contacto-h3">Contacta con el Autor</h3>
+                    <h4 class="contacto-h4"> ¡¡Tu opinion nos interesa!!</h4>
+                </article>
+                
+                <form action="procesar.php"name="contacto" method="post">
+                    
+                    <label>Nombre:
+                        <input type="text" name="nombre" placeholder="martin" required>
+                    </label>
+                    
+                    <label>Apellido:
+                        <input class="apellido-contacto" type="text" name="Apellido" placeholder="ford" required>
+                    </label>
+                    
+                    <label> Email:
+                        <input class="email-form" type="email" name="email" placeholder="look@gmail.com.ar" required>
+                    </label>
+                    
+                    
+                    <h4>Dejanos tu comentario</h4>
+                    <textarea name="comentario" id="" cols="30" rows="5"></textarea>
+                    
+                    <!--checkbox-->
+                    <p class="label-comprar" >
+                        <label for="Comprar">Descubre y dejate Descubrir</label>
+                        <input class="chexbox-comprar" type= "checkbox" name="comprar" value="Descubre y dejate Descubrir">
+                    </p>
+                    
+                    <p class="p-button">
+                        <button type="submit">Enviar</button>
+                        <button type="reset">Borrar</button>
+                    </p>
+                </form>
+            </section>
+        </main>
+                
+        <footer class="pie-de-pagina">       
+        
+            <article class="footer-article">
+                <h4 class="derechos animate__animated  animate__backInLeft"> Copyright Jr Corporation - All rights reserved.</h4>
+            </article>
+            
+            <article class="footer animate__animated  animate__backInUp ">   
+                <img class="footer-logo" src="../assets/icon/jr.png" alt="Joaquin Rufino">
+            </article>
+            
+            <article class="redes sociales animate__animated animate__backInRight ">
+                <a class="redes" href="https://www.facebook.com/people/Rufino-Joaqu%C3%ADn/100063458374105/" target="_blank">
+                    <img src="../assets/icon/facebook.svg" alt="Facebook">
+                </a>
+                
+                <a class="redes" href="https://mobile.twitter.com/rufinojoaquin" target="_blank" >
+                    <img src="../assets/icon/twitter.svg" alt="Twitter">
+                </a>
+                
+                <a class="redes"  href="https://ar.pinterest.com/rufinojoaquin10/" target="_blank">
+                    <img class="pinterest" src="../assets/icon/pinterest2.png" alt="Pinterest">
+                </a>
+                
+                <a class="redes" href="https://www.instagram.com/joaquinrufino/?hl=es"target="_blank">
+                    <img src="../assets/icon/instagram.svg" alt="instagram">
+                </a>
+                
+            </article>
+        </footer>  
+</body>  
+</html>
