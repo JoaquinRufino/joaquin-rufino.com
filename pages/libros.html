@@ -7,37 +7,67 @@
     <!--font-awesome-->
     <script src="https://kit.fontawesome.com/10a731976e.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="../assets/icon/jr.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <title>JoaquinRufino-libros</title>     
-    
+    <link rel="stylesheet" href="../css/estilos.css">
 </head>
 <body>
-        <header>
-            
-            <a class="font" href="./index.html">Joaquin Rufino</a>
-            
-            <nav class="navbar">
-                <ul>
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="#">Libros</a></li>
-                    <li><a href="../pages/blog.html">Blog</a></li>
-                    <li><a href="../pages/autor.html">Autor</a></li>
-                    <li><a href="../pages/contacto.html">Contacto</a></li>
+        <!--
+
+            <header>
+                <a class="font" href="./index.html">Joaquin Rufino</a>
+                
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="#">Libros</a></li>
+                        <li><a href="../pages/blog.html">Blog</a></li>
+                        <li><a href="../pages/autor.html">Autor</a></li>
+                        <li><a href="../pages/contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+            </header>
+        -->
+        <nav class="navbar navbar-expand-lg bg-black">
+            <div class="container-fluid">
+                <a class="font" href="./index.html">Joaquin Rufino</a> 
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-1">
+                  <li class="nav-item ">
+                    <a class="nav-link" href="../index.html">inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Libros</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../pages/blog.html">Blog</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../pages/autor.html">Autor</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../pages/contacto.html">Contacto</a>
+                  </li>
                 </ul>
-            </nav>
-        </header>
+              </div>
+            </div>
+          </nav>
+
     <main>
-        <!--comentario: me gustaria agregar 2 imagenes que esten juntas.-->
         <section>
-            <article class="article-libros">
+                
                 <article class="libros-imagen"> 
                     <img class="imagen" src="../assets/img/lantia_cover_5df0ca9f605a7_360.jpg" alt="Foto de la tapa">
                     <img class="imagen" src="../assets/img/libro.jpg" alt="foto de la Contratapa">
                 </article>
                 
+            <article class="article-libros">
                 <article class="article-textos">
                     <h2 class="h2-textos">Descubre y Dejate Descubrir</h2>
                     <h3 class="h3-textos">By Joaquin Rufino</h3>
@@ -65,9 +95,9 @@
         <article class="tabla-article">
             <table class="tabla" cellpadding="3" border="2">
                 <tr class="tr-tabla">
-                    <th>Nombre del libro</th>
-                    <th>Publicacion del libro</th>
-                    <th>Nombre del autor</th>
+                    <th >Nombre del libro</th>
+                    <th >Publicacion del libro</th>
+                    <th >Nombre del autor</th>
                 </tr>
                 <tr class="tr-tabla">
                     <td>Descubre y dejate Descubrir</td>
@@ -112,6 +142,6 @@
             
         </article>
     </footer> 
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>
 </html>
