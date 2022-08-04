@@ -11,6 +11,10 @@ body{
     background-repeat: no-repeat; 
     background-position: center;
     font-size: 20px;
+<<<<<<< HEAD
+=======
+    font-family:url(../assets/font/Lato-Regular.ttf)!important;
+>>>>>>> a181f2bdcb82617dc6762a87f078faffffa050d2
 }
 
 *{
@@ -34,7 +38,10 @@ body{
     font-family:'Merriweather', serif;
     font-size: 18px;
     margin: 0px 5px;
+<<<<<<< HEAD
     padding-bottom: 5px;
+=======
+>>>>>>> a181f2bdcb82617dc6762a87f078faffffa050d2
     text-decoration: none;
 }
 #navbarSupportedContent{
