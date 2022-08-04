@@ -4,13 +4,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 body{
+    font-family:url(../assets/font/Lato-Regular.ttf)!important;
     background-color: rgb(255, 253, 253);
     background-image:url(../assets/brackground/chalo-gallardo-kW-yPqdm8Fs-unsplash.jpg);
     background-size:cover;
     background-repeat: no-repeat; 
     background-position: center;
     font-size: 20px;
-    font-family:url(../assets/font/Lato-Regular.ttf)
 }
 
 *{
@@ -24,10 +24,23 @@ body{
     font-family: splash, cursive;
     font-size: 30px;
     text-decoration: none;
-    color: white;
+    color: white !important;
     padding: 10px;
 }
 
+/*menu hamburguesa*/
+.nav-link{
+    color: white !important;
+    font-family:'Merriweather', serif;
+    font-size: 18px;
+    margin: 0px 5px;
+    padding-bottom: 5px;
+    text-decoration: none;
+}
+#navbarSupportedContent{
+    flex-grow: initial;
+}
+/*
 header {
 display: flex;
 background-color: black;
@@ -57,7 +70,7 @@ nav ul li a{
     padding: 10px;
     margin: 0px 5px;
 }
-
+*/
 .pie-de-pagina{
     display: flex;
     flex-direction: row;
@@ -77,6 +90,7 @@ nav ul li a{
     color: white;
     padding: 30px 30px;
     font-size: 20px;
+    
 }
 
 .footer{ 
@@ -112,16 +126,17 @@ nav ul li a{
     height: 32px;
 }
 
+
 @media (max-width:768px) {
     .font{
         width: 50%;
         font-family: splash, cursive;
-        font-size: 12px;
+        font-size: 16px;
         text-decoration: none;
         color: white;
         padding:10px 5px;
     }
-    
+    /*
     header {
     display: flex;
     background-color: black;
@@ -151,7 +166,23 @@ nav ul li a{
         padding: 5px;
         margin: 5px 0px;
     }
-    
+    */
+    /*menu hamburguesa*/
+    .navbar-toggler-icon{
+        background-color: white;
+        border-radius: 5px;
+        
+    }
+    .navbar-nav{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .nav-link{
+        font-size: 16px;
+    }
+
+
     .pie-de-pagina{
         display: flex;
         flex-direction: column-reverse;
@@ -196,6 +227,7 @@ nav ul li a{
         color: white;
         padding: 30px 10px;
         font-size: 16px;
+        
     } 
     .footer{ 
         display: flex;
@@ -210,6 +242,7 @@ nav ul li a{
         width: 70px; 
     }
 }
+
 
 
 /*finaliza estilo para todas las paginas*/
@@ -255,6 +288,7 @@ align-items: center;
 .comprar-link:hover{
     font-size: 28px;
     padding: 10px;
+    color: #fff;
 }
 
 
@@ -298,12 +332,13 @@ padding: 5px;
     font-size: 22px;
     margin-bottom:15px;
     padding-left: 5px;
+    list-style-type: none;
 }
 
 /*bloque 2*/
 .boton-2{
     text-decoration: none;
-    color: white;
+    color: white !important;
     border-radius: 10px;
     width: 300px;
     padding: 10px;
@@ -315,6 +350,7 @@ padding: 5px;
     justify-content: center;
     font-size: 18px;
     font-family:'Merriweather', serif;
+    
 }
 
 @media (max-width:1023px){
@@ -556,6 +592,8 @@ padding: 5px;
     margin-top: 10px;
 }
 
+
+
 .article-tectos{
     display: flex;
     flex-direction: column;
@@ -575,6 +613,7 @@ padding: 5px;
     font-size: 24;
     color: white;
     margin-right: 10px;
+    
 }
 
 .p-textos{
@@ -591,9 +630,9 @@ padding: 5px;
     justify-content: center;
     font-size: 24px;
     color: black;
-    margin-top: 5px;
+    margin-top: 0px;
     padding-right: 12px;
-    padding-top: 12px;
+    padding-top: 0px;
     transition: all 2s;
 }
 
@@ -612,8 +651,9 @@ padding: 5px;
     color: #fff;
     font-size: 24px;
     padding: 30px 10px;
-    padding-bottom: 8px;
+    padding-bottom: 0px;
     margin-top: 20px;
+    margin-bottom: 5px;
 
 }
 
@@ -621,18 +661,24 @@ padding: 5px;
     display: flex;
     flex-direction: column;
     line-height: 40px;
+    list-style-type: none;
+    padding: 5px;
 }
 
 .links{
-color: #fff;
+color: #fff !important;
 font-size: 22px;
-padding: 10px;
+padding: 5px;
 transition: all 2s;
 }
 
 .links:hover{
     font-size: 26px;
     background-color: rgba(3, 3, 4, 0.33);
+}
+
+.fa-solid{
+    color: black;
 }
 
 .tabla-article{
@@ -657,7 +703,7 @@ background-image: linear-gradient( rgba(0, 0, 255, 0.089),black );
 .tr-tabla{
     color: white;
     font-size: 20px;
-    margin: 10px 0px;
+    margin: 5px 0px;
     padding: 20px 20px;
     text-align: center;
 }

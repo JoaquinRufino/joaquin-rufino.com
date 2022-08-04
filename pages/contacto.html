@@ -5,66 +5,122 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../assets/icon/jr.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <title>JoaquinRufino-contacto</title>
+    <link rel="stylesheet" href="../css/estilos.css">
 </head>
 <body>
-    
-    <header>
-        
-        <a class="font" href="./index.html">Joaquin Rufino</a>
-        
-        <nav class="navbar">
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="../pages/libros.html">Libros</a></li>
-                <li><a href="../pages/blog.html">Blog</a></li>
-                <li><a href="../pages/autor.html">Autor</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!--
+
+        <header>
+            <a class="font" href="./index.html">Joaquin Rufino</a>
             
+            <nav class="navbar">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../pages/libros.html">Libros</a></li>
+                    <li><a href="../pages/blog.html">Blog</a></li>
+                    <li><a href="../pages/autor.html">Autor</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+    -->
+    <nav class="navbar navbar-expand-lg bg-black">
+        <div class="container-fluid">
+            <a class="font" href="./index.html">Joaquin Rufino</a> 
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-1">
+              <li class="nav-item ">
+                <a class="nav-link" href="../index.html">inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../pages/libros.html">Libros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../pages/blog.html">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../pages/autor.html">Autor</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav> 
+    
         <main>
-            <section class="section-contacto">
-                <article class="article-contacto">
-                    <h3 class="contacto-h3">Contacta con el Autor</h3>
-                    <h4 class="contacto-h4"> ¡¡Tu opinion nos interesa!!</h4>
-                </article>
-                
-                <form action="procesar.php"name="contacto" method="post">
+          <div class="container mt-4">
+            <form class="col-12">
+                <p class="mb-2 mt-1 col-12">
+                  <label for="validationCustom01" class="form-label">Nombre</label>
+                  <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+                </p>
+                <p class="mb-2 col-12">
+                  <label for="validationCustom02" class="form-label">Apellido</label>
+                  <input type="text" class="form-control" id="validationCustom02" value="pepe" required>
+                </p>
+                <p class="mb-1">
+                  <label for="validationCustomUsername" class="form-label">Email</label>
+                  <p class="input-group has-validation mb-1">
+                    <span class="input-group-text" id="inputGroupPrepend">@</span>
+                    <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                  </p>
+                </p>
+              <p>
+                <button class="btn btn-outline-success" type="submit">Enviar</button>
+              </p>
+            </form>
+          </div>
+            
+            
+            <!--
+                <section class="section-contacto">
+                    <article class="article-contacto">
+                        <h3 class="contacto-h3">Contacta con el Autor</h3>
+                        <h4 class="contacto-h4"> ¡¡Tu opinion nos interesa!!</h4>
+                    </article>
                     
-                    <label>Nombre:
-                        <input type="text" name="nombre" placeholder="martin" required>
-                    </label>
-                    
-                    <label>Apellido:
-                        <input class="apellido-contacto" type="text" name="Apellido" placeholder="ford" required>
-                    </label>
-                    
-                    <label> Email:
-                        <input class="email-form" type="email" name="email" placeholder="look@gmail.com.ar" required>
-                    </label>
-                    
-                    
-                    <h4>Dejanos tu comentario</h4>
-                    <textarea name="comentario" id="" cols="30" rows="5"></textarea>
-                    
-                    <!--checkbox-->
-                    <p class="label-comprar" >
-                        <label for="Comprar">Descubre y dejate Descubrir</label>
-                        <input class="chexbox-comprar" type= "checkbox" name="comprar" value="Descubre y dejate Descubrir">
-                    </p>
-                    
-                    <p class="p-button">
-                        <button type="submit">Enviar</button>
-                        <button type="reset">Borrar</button>
-                    </p>
-                </form>
-            </section>
+                    <form action="procesar.php"name="contacto" method="post">
+                        
+                        <label>Nombre:
+                            <input type="text" name="nombre" placeholder="martin" required>
+                        </label>
+                        
+                        <label>Apellido:
+                            <input class="apellido-contacto" type="text" name="Apellido" placeholder="ford" required>
+                        </label>
+                        
+                        <label> Email:
+                            <input class="email-form" type="email" name="email" placeholder="look@gmail.com.ar" required>
+                        </label>
+                        
+                        
+                        <h4>Dejanos tu comentario</h4>
+                        <textarea name="comentario" id="" cols="30" rows="5"></textarea>
+                        
+            -->
+                        <!--checkbox
+                            
+                        <p class="label-comprar" >
+                            <label for="Comprar">Descubre y dejate Descubrir</label>
+                            <input class="chexbox-comprar" type= "checkbox" name="comprar" value="Descubre y dejate Descubrir">
+                        </p>
+                        <p class="p-button">
+                            <button type="submit">Enviar</button>
+                            <button type="reset">Borrar</button>
+                        </p>
+                    </form>
+                </section>
+            -->
         </main>
                 
         <footer class="pie-de-pagina">       
@@ -95,6 +151,8 @@
                 </a>
                 
             </article>
-        </footer>  
+        </footer> 
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
 </body>  
 </html>
