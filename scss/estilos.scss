@@ -5,20 +5,38 @@
 $fontfamily:url(../assets/font/Lato-Regular.ttf);
 $font:20px;
 $background:url(../assets/brackground/chalo-gallardo-kW-yPqdm8Fs-unsplash.jpg);
-
+$color: white;
 /*font*/
 @import url('https://fonts.googleapis.com/css2?family=Splash&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
+$estilos: (
+    color:white,
+    fontsize: 22px,
+    marginb: 15px,
+    paddingleft: 5px,
+);
+
+//extend
+.div{
+    font-size: 10px;
+    padding: 10px;
+    letter-spacing: 10px;
+}
+
+.prueba{
+    @extend .div;
+}
+
 body{
     font-family: $fontfamily;
-    background-color:$color;
-    background-image:$background;
     background-size:cover;
     background-repeat: no-repeat; 
     background-position: center;
     font-size: $font;
+    background-image: $background;
+    background-color: $color;
 }
 
 *{
@@ -339,10 +357,10 @@ padding: 5px;
 }
 
 .tarjeta__textos {
-    color: white;
-    font-size: 22px;
-    margin-bottom:15px;
-    padding-left: 5px;
+    color: map-get($map: $estilos , $key: color );
+    font-size: map-get($map: $estilos , $key: fontsize );
+    margin-bottom:map-get($map: $estilos, $key: marginb );
+    padding-left: map-get($map: $estilos, $key: paddingleft );
     list-style-type: none;
 }
 
@@ -880,7 +898,6 @@ gap:0px 10px;
     
 }
 
-
 .foto-blog{  
 animation-name: blog;
     animation-duration: 1.5;
@@ -903,8 +920,6 @@ animation-name: blog;
         transform: scale(1);
         }
 }
-
-
 
 /*
 .scroll-dow-please{
@@ -1076,21 +1091,13 @@ animation-name: blog;
 }
 
 .item4-fotos{
-    
     height: 350px;
     width: 500px;
     padding: 15px 0px;
     margin-bottom: 10px;
 }
 
-
-
-
-
-
 }
-
-
 
 @media (max-width:768px) {
     .grid-container{
@@ -1149,12 +1156,14 @@ animation-name: blog;
     margin: 20px 5px;
 }
 
-.item3-fotos{
+@mixin estilos () {
     height: 250px;
     width: 300px;
     padding: 15px 0px;
 }
-
+.item3-fotos{
+    @include estilos();
+}
 
 .item4{
     display: flex;
@@ -1163,18 +1172,10 @@ animation-name: blog;
 }
 
 .item4-fotos{
-    height: 250px;
-    width: 300px;
-    padding: 15px 0px;
+    @include estilos ();
     margin-bottom: 10px;
 }
 
-.iframe{
-    display: flex;
-    justify-content: center;
-    margin: 30px;
-    padding: 20px;
-}
 }
 
 

@@ -2,14 +2,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Splash&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
-body {
-  font-family: url(../assets/font/Lato-Regular.ttf);
-  background-color: white;
-  background-image: url(../assets/brackground/chalo-gallardo-kW-yPqdm8Fs-unsplash.jpg);
+.div, .prueba {
+  font-size: 10px;
+  padding: 10px;
+  letter-spacing: 10px;
+}
+
+body{
+  font-family:url(../assets/font/Lato-Regular.ttf);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   font-size: 20px;
+  background-image: url(../assets/brackground/chalo-gallardo-kW-yPqdm8Fs-optimizada.jpg);
+  
 }
 
 * {
@@ -41,37 +47,6 @@ body {
   flex-grow: initial;
 }
 
-/*
-header {
-display: flex;
-background-color: black;
-border: 2px solid white;
-border-radius: 5px;
-position: sticky;
-top: 0;
-}
-
-.navbar{
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    padding: 24px 15px;
-}
-
-ul {
-    display: flex;
-    list-style-type: none;
-}
-
-nav ul li a{
-    font-family:'Merriweather', serif; 
-    font-size: 16px;
-    text-decoration: none;
-    color: white;
-    padding: 10px;
-    margin: 0px 5px;
-}
-*/
 .pie-de-pagina {
   display: flex;
   flex-direction: row;
@@ -127,58 +102,35 @@ nav ul li a{
   height: 32px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .font {
     width: 50%;
     font-family: splash, cursive;
-    font-size: 16px;
+    font-size: 18px;
     text-decoration: none;
     color: white;
-    padding: 10px 5px;
+    padding: 10px 0px;
   }
-  /*
-  header {
-  display: flex;
-  background-color: black;
-  border: 2px solid white;
-  border-radius: 5px;
-  position: sticky;
-  top: 0;
-  }
-
+  
   .navbar{
-      display: flex;
-      justify-content: flex-end;
-      width: 100%;
-      padding: 5px;
+    position: sticky;
+    top: 0;
   }
-
-  ul {
-      display: flex;
-      list-style-type: none;
-  }
-
-  nav ul li a{
-      font-family:'Merriweather', serif; 
-      font-size: 10px;
-      text-decoration: none;
-      color: white;
-      padding: 5px;
-      margin: 5px 0px;
-  }
-  */
-  /*menu hamburguesa*/
   .navbar-toggler-icon {
     background-color: white;
-    border-radius: 5px;
+    border-radius: 5px; 
   }
+
   .navbar-nav {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    flex-direction: row;
+    justify-content: center;
+    
   }
   .nav-link {
-    font-size: 16px;
+    font-size: 14px;
+    padding: 0px 5px;
+    margin-top: 20px;
   }
   .pie-de-pagina {
     display: flex;
@@ -214,9 +166,29 @@ nav ul li a{
   }
 }
 @media (min-width: 768px) {
+  .navbar{
+    position: sticky;
+    top: 0;
+  }
+  .navbar-toggler-icon {
+    background-color: white;
+    border-radius: 5px;
+  }
+  .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+  }
+  .nav-link {
+    font-size: 18px;
+    padding: 0px 5px;
+    margin-top:5px;
+  }
+
   .derechos {
     color: white;
-    padding: 30px 10px;
+    padding: 22px 10px;
     font-size: 16px;
     font-family: url(../assets/font/Lato-Regular.ttf);
   }
@@ -284,7 +256,7 @@ main h1 {
 }
 
 .tarjeta__imagen {
-  width: 800px;
+  width: 700px;
   height: 400px;
 }
 
@@ -524,6 +496,8 @@ main h1 {
     font-family: "Merriweather", serif;
   }
 }
+
+
 /*libros*/
 @media (min-width: 768px) {
   .article-libros {
@@ -604,7 +578,7 @@ main h1 {
     padding: 5px;
   }
   .links {
-    color: #fff !important;
+    color: #fff;
     font-size: 22px;
     padding: 5px;
     transition: all 2s;
@@ -612,6 +586,7 @@ main h1 {
   .links:hover {
     font-size: 26px;
     background-color: rgba(3, 3, 4, 0.33);
+    color: #fff;
   }
   .fa-solid {
     color: black;
@@ -669,12 +644,14 @@ main h1 {
     font-size: 24px;
     padding: 5px;
     color: #fff;
+    font-family: url(../assets/font/Lato-Regular.ttf);
   }
   .h3-textos {
     text-align: center;
     font-size: 20px;
     color: white;
     margin-right: 5px;
+    font-family: url(../assets/font/Lato-Regular.ttf);
   }
   .p-textos {
     color: #fff;
@@ -682,7 +659,8 @@ main h1 {
     font-size: 18px;
     margin-top: 5px;
     padding: 5px;
-    padding-bottom: 5px;
+    padding-bottom: 0px;
+    font-family: url(../assets/font/Lato-Regular.ttf);
   }
   .a-textos {
     text-align: right;
@@ -693,7 +671,17 @@ main h1 {
     border-radius: 15px;
     padding: 6px;
     margin-left: 5px;
-  }
+    transition: all 2s;
+    margin-bottom: 15px;
+}
+
+.a-textos:hover {
+  font-size: 24px;
+  padding: 8px;
+  text-decoration: none;
+  color: #fff;
+}
+
   .article-links {
     display: flex;
     flex-direction: column;
@@ -707,9 +695,14 @@ main h1 {
     font-size: 22px;
   }
   .ul-links {
+    justify-content: flex-start;
     display: flex;
     flex-direction: column;
     line-height: 40px;
+    text-decoration: none;
+    list-style-type: none;
+    padding-left: 0px;
+    margin-bottom: 0px;
   }
   .links {
     color: #fff;
@@ -720,21 +713,29 @@ main h1 {
   .links:hover {
     font-size: 22px;
     background-color: rgba(3, 3, 4, 0.33);
+    color: #fff;
   }
+  .fa-solid {
+    color: black;
+  }
+
   .tabla-article {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     margin-top: 50px;
     height: 150px;
     width: 300px;
     padding: 0px 0px;
     margin-left: 2px;
+    margin-bottom: 1px;
     border-radius: 10px;
     border: 1px groove white;
     background-image: linear-gradient(rgba(0, 0, 255, 0.089), black);
   }
+
   .tabla {
     height: 150px;
+    
     border-radius: 10px;
     border: 1px solid rgba(0, 0, 255, 0.188);
     border-style: groove;
@@ -985,6 +986,12 @@ main h1 {
     margin: 5px 0px;
     color: white;
   }
+h4{
+  font-size: 26px;
+  font-family: url(../assets/font/Lato-Regular.ttf);
+  
+
+}
   .item2-p {
     margin-top: 10px;
     padding: 0px 2px;
@@ -1011,12 +1018,6 @@ main h1 {
     width: 300px;
     padding: 15px 0px;
     margin-bottom: 10px;
-  }
-  .iframe {
-    display: flex;
-    justify-content: center;
-    margin: 30px;
-    padding: 20px;
   }
 }
 /*Autor*/
