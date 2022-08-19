@@ -9,13 +9,12 @@
 }
 
 body{
-  font-family:url(../assets/font/Lato-Regular.ttf);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   font-size: 20px;
   background-image: url(../assets/brackground/chalo-gallardo-kW-yPqdm8Fs-optimizada.jpg);
-  
+  font-family: 'Lato bold 700', sans-serif;
 }
 
 * {
@@ -64,10 +63,12 @@ body{
 
 .derechos {
   color: white;
-  padding: 30px 30px;
+  padding: 20px 20px;
   font-size: 20px;
-  font-family: url(../assets/font/Lato-Regular.ttf);
+  margin-left: 5px;
+  font-family: 'lato regular 700', serif;
 }
+
 
 .footer {
   display: flex;
@@ -129,8 +130,10 @@ body{
   }
   .nav-link {
     font-size: 14px;
-    padding: 0px 5px;
+    padding: 0px 10px;
     margin-top: 20px;
+    margin-left: 0px;
+    padding-left: 2px;
   }
   .pie-de-pagina {
     display: flex;
@@ -148,8 +151,8 @@ body{
   .derechos {
     color: white;
     padding: 20px 2px;
-    font-size: 14px;
-    font-family: url(../assets/font/Lato-Regular.ttf);
+    font-size: 15px;
+    font-family: 'lato regular 700', serif;
   }
   .footer {
     display: flex;
@@ -182,16 +185,18 @@ body{
   }
   .nav-link {
     font-size: 18px;
-    padding: 0px 5px;
+    padding: 0px 15px;
     margin-top:5px;
   }
 
   .derechos {
     color: white;
-    padding: 22px 10px;
-    font-size: 16px;
-    font-family: url(../assets/font/Lato-Regular.ttf);
+    padding: 20px 20px;
+    font-size: 18px;
+    margin-left: 5px;
+    font-family: 'lato regular ', serif;
   }
+
   .footer {
     display: flex;
     flex-direction: column;
@@ -528,12 +533,14 @@ main h1 {
     font-size: 34px;
     padding: 5px;
     color: #fff;
+    font-family: 'Merriweather', serif;
   }
   .h3-textos {
     text-align: center;
     font-size: 24;
     color: white;
     margin-right: 10px;
+    font-family: 'Merriweather', serif;
   }
   .p-textos {
     color: #fff;
@@ -543,7 +550,9 @@ main h1 {
     padding-left: 5px;
     padding-right: 5px;
   }
+
   .a-textos {
+    font-family: "lato regular 700" sans-serif;
     display: flex;
     justify-content: center;
     font-size: 24px;
@@ -557,6 +566,7 @@ main h1 {
     font-size: 32px;
     color: black;
   }
+
   .article-links {
     display: flex;
     flex-direction: column;
@@ -569,6 +579,7 @@ main h1 {
     padding-bottom: 0px;
     margin-top: 20px;
     margin-bottom: 5px;
+    font-family: 'Merriweather', serif;
   }
   .ul-links {
     display: flex;
@@ -582,6 +593,7 @@ main h1 {
     font-size: 22px;
     padding: 5px;
     transition: all 2s;
+    font-family: 'Merriweather', serif;
   }
   .links:hover {
     font-size: 26px;
@@ -592,12 +604,13 @@ main h1 {
     color: black;
   }
   .tabla-article {
+    margin: 5px;
     display: flex;
     justify-content: center;
     margin-top: 50px;
-    width: 600px;
+    width: 700px;
     margin-bottom: 1px;
-    border-radius: 10px;
+    border-radius: 5px;
     border: 1px groove white;
     background-image: linear-gradient(rgba(0, 0, 255, 0.089), black);
   }
@@ -606,15 +619,30 @@ main h1 {
     border-radius: 10px;
     border: 1px solid rgba(0, 0, 255, 0.188);
     border-style: groove;
-    width: 600px;
+    width: 700px;
   }
   .tr-tabla {
     color: white;
-    font-size: 20px;
-    margin: 5px 0px;
-    padding: 20px 20px;
+    font-size: 18px;
+    margin: 0px;
+    padding: 0px;
     text-align: center;
+    border-style: groove;
+    border: 1px solid white;
   }
+th{
+  padding: 0px;
+  width: 100px;
+}
+td{
+  font-size: 18px;
+  width: 100px;
+}
+.tdchanges{
+font-size: 16px;
+padding-left: 5px;
+}
+
 }
 @media (max-width: 767px) {
   .article-libros {
@@ -720,34 +748,49 @@ main h1 {
   }
 
   .tabla-article {
+    margin: 5px;
     display: flex;
     justify-content: center;
     margin-top: 50px;
-    height: 150px;
-    width: 300px;
-    padding: 0px 0px;
-    margin-left: 2px;
+    width: 550px;
     margin-bottom: 1px;
-    border-radius: 10px;
+    border-radius: 5px;
     border: 1px groove white;
     background-image: linear-gradient(rgba(0, 0, 255, 0.089), black);
   }
-
   .tabla {
     height: 150px;
-    
     border-radius: 10px;
     border: 1px solid rgba(0, 0, 255, 0.188);
     border-style: groove;
-    border-radius: 10px;
-    border: 1px solid white;
+    width: 700px;
   }
   .tr-tabla {
     color: white;
     font-size: 16px;
-    margin: 10px 0px;
-    padding: 0px 0px;
+    margin: 0px;
+    padding: 0px;
     text-align: center;
+    border-style: groove;
+    border: 1px solid white;
+  }
+th{
+  padding: 0px;
+  width: 200px;
+}
+td{
+  font-size: 15px;
+  width: 200px;
+}
+.tdchanges{
+font-size: 13px;
+padding-left: 2px;
+}
+}
+
+@media (max-width:576px) {
+  .tabla-article{
+    visibility: collapse;
   }
 }
 /*blog*/
@@ -799,22 +842,7 @@ main h1 {
       transform: scale(1);
     }
   }
-  /*
-  .scroll-dow-please{
-      text-align: center;
-      margin-right: 20px;
-
-  }
-  .scrool-blog{
-      text-decoration: none;
-      color: white;
-      display: inline-block;
-  }
-
-  .fa-chevron-down{ 
-      color: white;
-  }
-  */
+  
   .item2 {
     display: flex;
     flex-direction: column;
@@ -824,12 +852,18 @@ main h1 {
     grid-row: 2/2;
     grid-column: 1/1;
     margin-top: 40px;
+    font-family:'lato regular 700' sans-serif;
   }
   .item2-p {
     text-align: center;
     margin-top: 10px;
     margin: 20px;
   }
+
+  .blogg{
+  font-family: 'Merriweather', serif;
+  }
+
   .item3 {
     display: flex;
     flex-direction: row;
@@ -881,15 +915,6 @@ main h1 {
       transform: scale(1);
     }
   }
-  /*
-  .iframe{
-      display: flex;
-      justify-content: center;
-      height: 400px;
-      margin-top: 30px;
-      margin-bottom: 10px;
-  } 
-  */
 }
 @media (max-width: 992px) {
   .grid-container {
@@ -1040,6 +1065,7 @@ h4{
   font-size: 22px;
   color: #fff;
   margin-bottom: 40px;
+  font-family: 'Merriweather', serif;
 }
 
 .autor-textos {
@@ -1052,9 +1078,10 @@ h4{
 
 .autor-h2 {
   margin-right: 40px;
-  font-size: 38px;
+  font-size: 36px;
   padding: 20px;
   color: #fff;
+  font-family: 'Merriweather', serif;
 }
 
 .autor-p {
@@ -1077,7 +1104,7 @@ h4{
     width: 280px;
     height: 280px;
     margin-top: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
   .autor-h3 {
     visibility: collapse;
@@ -1087,14 +1114,14 @@ h4{
     flex-direction: column;
     align-items: center;
     margin-top: 5px;
-    margin-bottom: 5px;
   }
   .autor-h2 {
     text-align: center;
     margin-right: 5px;
-    font-size: 25px;
+    font-size: 26px;
     padding: 5px;
     color: #fff;
+    font-family: 'lato regular', serif;
   }
   .autor-p {
     color: white;
@@ -1102,48 +1129,23 @@ h4{
     margin-right: 5px;
     text-align: center;
     padding: 5px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+    font-family: 'Lato', sans-serif;
+
   }
 }
+
 /*contacto*/
-.section-contacto {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-bottom: 20px;
-  padding: 20px;
-  margin-right: 30px;
-}
-
-.article-contacto {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.contacto-h3 {
-  font-size: 32px;
-  margin-top: 10px;
-  margin-right: 50px;
-}
-
-.contacto-h4 {
-  font-size: 25px;
-  margin-bottom: 10px;
-  margin-right: 50px;
-  margin-top: 10px;
-}
-
 form {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  border: 1px solid black;
+  border: 1px solid none;
   border-radius: 10px;
   width: 40%;
   margin-bottom: 40px;
   margin-top: 20px;
-  background-color: white;
+  background-color: url(../assets/brackground/chalo-gallardo-kW-yPqdm8Fs-optimizada.jpg);
   margin-right: 40px;
 }
 
@@ -1152,6 +1154,7 @@ form label {
   flex-direction: row;
   align-items: center;
   padding: 10px;
+  color: white;
 }
 
 form label input {
@@ -1162,161 +1165,8 @@ form label input {
   height: 25px;
 }
 
-.apellido-contacto {
-  width: 165px;
-}
-
-.email-form {
-  width: 188px;
-}
-
-form h4 {
-  padding: 5px;
-  font-size: 20px;
-  margin-left: 5px;
-}
-
-form textarea {
-  display: flex;
-  flex-direction: row;
-  width: 95%;
-  padding: 10px;
-  margin-left: 10px;
-}
-
-.chexbox-h4 {
-  font-size: 18px;
-}
-
-.label-comprar {
-  display: flex;
-  font-size: 18px;
-  margin-left: 5px;
-}
-
-.chexbox-comprar {
-  height: 24px;
-  margin-top: 10px;
-  width: 15px;
-}
-
-.p-button {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  padding: 5px;
-  background-color: black;
-  border-radius: 8px;
-}
-
-form p button {
-  margin: 5px;
-  padding: 2px 20px;
+.form-control{
   color: black;
-  background-color: white;
-  border-radius: 10px;
-  margin: 5px 10px;
-}
-
-@media (max-width: 768px) {
-  .section-contacto {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 60px;
-  }
-  .article-contacto {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0px 0px;
-  }
-  .contacto-h3 {
-    text-align: center;
-    font-size: 20px;
-    margin-top: 10px;
-    width: 200px;
-    margin-left: 10px;
-  }
-  .contacto-h4 {
-    text-align: center;
-    font-size: 16px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    width: 100%;
-  }
-  form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid black;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    width: 300px;
-    margin-top: 20px;
-    margin-left: 5px;
-    background-color: white;
-  }
-  form label {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 16px;
-  }
-  form label input {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 150px;
-    height: 20px;
-  }
-  .apellido-contacto {
-    width: 150px;
-  }
-  .email-form {
-    width: 150px;
-  }
-  form h4 {
-    padding: 5px;
-    font-size: 16px;
-  }
-  form textarea {
-    display: flex;
-    flex-direction: row;
-    width: 90%;
-    padding: 10px 0px;
-    margin-right: 10px;
-  }
-  .chexbox-h4 {
-    font-size: 16px;
-    text-align: center;
-    margin-right: 5px;
-  }
-  .label-comprar {
-    display: flex;
-    font-size: 16px;
-  }
-  .chexbox-comprar {
-    height: 24px;
-    margin-top: 8px;
-    width: 15px;
-  }
-  .p-button {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    padding: 5px;
-    background-color: white;
-    border-radius: 10px;
-  }
-  form p button {
-    font-family: Georgia, "Times New Roman", Times, serif;
-    padding: 5px 20px;
-    color: white;
-    background-color: black;
-    border-radius: 15px;
-    margin: 5px 10px;
-  }
 }
 
 /*# sourceMappingURL=estilos.css.map */
