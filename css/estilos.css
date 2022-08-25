@@ -929,8 +929,8 @@ padding-left: 2px;
     animation-timing-function: ease-in-out;
     animation-delay: 2s;
     animation: fotos 4000ms;
-    animation-duration: 2s;
-    animation-iteration-count: 1;
+    animation-duration: 4s;
+    animation-iteration-count: 2;
   }
   .item4 {
     display: flex;
@@ -948,8 +948,8 @@ padding-left: 2px;
     animation-timing-function: ease-in;
     animation-delay: 2s;
     animation: fotos 4000ms;
-    animation-duration: 2s;
-    animation-iteration-count: 1;
+    animation-duration: 4s;
+    animation-iteration-count: 2;
   }
   @keyframes fotos {
     0% {
