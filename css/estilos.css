@@ -670,10 +670,12 @@ main h1 {
 th{
   padding: 0px;
   width: 100px;
+  border: 1px solid white;
 }
 td{
   font-size: 18px;
   width: 100px;
+  border: 1px solid white;
 }
 .tdchanges{
 font-size: 16px;
@@ -815,10 +817,12 @@ padding-left: 5px;
 th{
   padding: 0px;
   width: 200px;
+  border: 1px solid white;
 }
 td{
   font-size: 15px;
   width: 200px;
+  border: 1px solid white;
 }
 .tdchanges{
 font-size: 13px;
