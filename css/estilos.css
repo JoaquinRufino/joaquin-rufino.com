@@ -92,9 +92,25 @@ body{
   margin-right: 10px;
 }
 
+.iconosredes{
+  width: 32px;
+  height: 32px;
+  transition: all 0.5s;
+}
+
+.iconosredes:hover{
+  width: 40px;
+  height: 40px;
+}
+
 .pinterest {
   width: 32px;
   height: 32px;
+  transition: 0.5s;
+}
+.pinterest:hover {
+  width: 40px;
+  height: 40px;
 }
 
 @media (max-width: 767px) {
@@ -163,7 +179,27 @@ body{
     margin-top: 10px;
     padding: 5px 0px 0px 10px;
   }
+  .iconosredes{
+    width: 32px;
+    height: 32px;
+  }
+  .iconosredes:hover{
+    width: 32px;
+    height: 32px;
+    position: disabled;
+  }
+  
+  .pinterest {
+    width: 32px;
+    height: 32px;
+  }
+  .pinterest:hover {
+    position: disabled;
+    width: 32px;
+    height: 32px;
 }
+}
+
 @media (min-width: 768px) {
   .navbar{
     position: sticky;
