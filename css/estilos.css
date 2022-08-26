@@ -927,9 +927,7 @@ padding-left: 2px;
     border-radius: 30px;
     animation-name: fotos;
     animation-timing-function: ease-in-out;
-    animation-delay: 2s;
     animation: fotos 4000ms;
-    animation-duration: 3s;
     animation-iteration-count: 1;
   }
   .item4 {
@@ -946,9 +944,7 @@ padding-left: 2px;
     margin-bottom: 20px;
     animation-name: fotos;
     animation-timing-function: ease-in;
-    animation-delay: 2s;
     animation: fotos 4000ms;
-    animation-duration: 3s;
     animation-iteration-count: 1;
   }
   @keyframes fotos {
