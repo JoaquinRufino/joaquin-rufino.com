@@ -929,7 +929,9 @@ padding-left: 2px;
     animation-timing-function: ease-in-out;
     animation: fotos 4000ms;
     animation-iteration-count: 1;
+    animation-duration: 2s;
   }
+
   .item4 {
     display: flex;
     justify-content: space-evenly;
@@ -946,7 +948,9 @@ padding-left: 2px;
     animation-timing-function: ease-in;
     animation: fotos 4000ms;
     animation-iteration-count: 1;
+    animation-duration: 2s;
   }
+  
   @keyframes fotos {
     0% {
       border-radius: 40%;
