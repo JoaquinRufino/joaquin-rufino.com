@@ -540,24 +540,35 @@ main h1 {
 
 /*libros*/
 @media (min-width: 768px) {
-  .article-libros {
+  .carousel-item.active{
+display: none;
+  }
+  .carousel-inner {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+  .carousel-item {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    backface-visibility:hidden;
+    transform: none;
+    transition: none;
+  }
+  .carousel-control-next, .carousel-control-prev{
+    width: 40%;
+    op
   }
 
-  .libros-imagen {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 5px;
-  }
   .imagen {
-    padding: 5px;
-    height: 400px;
-    width: 300px;
-    margin-top: 10px;
+    height: 550px;
+    width: 400px;
+    margin-top: 20px;
     border-radius: 10px;
+    margin-bottom: 20px;
   }
   .article-tectos {
     display: flex;
@@ -684,23 +695,37 @@ padding-left: 5px;
 }
 
 @media (max-width: 767px) {
-  .article-libros {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .libros-imagen {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 5px;
-    margin-top: 10px;
-  }
-  .imagen {
+.carousel-item.active{
+  display: none;
+}
+.carousel-inner {
+  display: flex;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.carousel-item {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  backface-visibility:hidden;
+  transform: none;
+  transition: none;
+}
+.carousel-control-next, .carousel-control-prev{
+  width: 40%;
+}
+.imagen {
     padding: 5px;
     height: 230px;
     width: 160px;
     border-radius: 10px;
+  }
+  .article-libros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .article-textos {
     display: flex;
@@ -928,7 +953,7 @@ padding-left: 2px;
     animation-name: fotos;
     animation-timing-function: ease-in-out;
     animation: fotos 4000ms;
-    animation-iteration-count: 1;
+    animation-iteration-count: 2;
     animation-duration: 2s;
   }
 
@@ -947,7 +972,7 @@ padding-left: 2px;
     animation-name: fotos;
     animation-timing-function: ease-in;
     animation: fotos 4000ms;
-    animation-iteration-count: 1;
+    animation-iteration-count: 2;
     animation-duration: 2s;
   }
   
