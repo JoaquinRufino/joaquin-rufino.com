@@ -199,7 +199,6 @@ body{
     height: 32px;
 }
 }
-
 @media (min-width: 768px) {
   .navbar{
     position: sticky;
@@ -225,16 +224,15 @@ body{
   .derechos {
     color: white;
     padding: 20px 20px;
-    font-size: 18px;
+    font-size: 16px;
     margin-left: 5px;
     font-family: 'lato regular ', serif;
   }
-
   .footer {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 200px;
+    width: 240px;
     margin-right: 0px;
   }
   .footer-logo {
@@ -576,9 +574,9 @@ display: none;
     width: 400px;
     margin-top: 30px;
     border-radius: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     box-shadow: 0 0px 0 5px #1b1728,
-                0px 5px 50px #fff;
+                0px 2px 50px #fff;
 }
   .article-tectos {
     display: flex;
@@ -587,9 +585,10 @@ display: none;
   }
   .h2-textos {
     text-align: center;
-    margin-top: 10px;
     font-size: 34px;
     padding: 5px;
+    padding-top: 0px;
+    margin-top: 0px;
     color: #fff;
     font-family: 'Merriweather', serif;
   }
@@ -734,7 +733,7 @@ padding-left: 5px;
     box-shadow: 0 0 0px #1b1728,
                 0px 0px 30px #fff;
     margin-top: 10px;
-    margin-bottom:10px;
+    margin-bottom:30px;
   }
   .article-libros {
     display: flex;
@@ -752,6 +751,8 @@ padding-left: 5px;
     padding: 5px;
     color: #fff;
     font-family: url(../assets/font/Lato-Regular.ttf);
+    margin-top: 0px;
+    padding-top: 0px;
   }
   .h3-textos {
     text-align: center;
@@ -873,6 +874,22 @@ padding-left: 2px;
   .tabla-article{
     visibility: collapse;
   }
+  .h2-textos {
+    text-align: center;
+    font-size: 22px;
+    padding: 5px;
+    color: #fff;
+    font-family: url(../assets/font/Lato-Regular.ttf);
+    margin-top: 0px;
+    padding-top: 0px;
+  }
+  .h3-textos {
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    margin-right: 5px;
+    font-family: url(../assets/font/Lato-Regular.ttf);
+  }
 }
 /*blog*/
 @media (min-width: 992px) {
@@ -894,6 +911,7 @@ padding-left: 2px;
     margin-top: 10px;
     grid-row: 1/1;
     grid-column: 1/1;
+    background-color: transparent;
   }
   .foto-blog {
     width: 500px;
@@ -901,6 +919,7 @@ padding-left: 2px;
     margin: 0px 0px;
     padding-right: 14px;
     padding-left: 5px;
+    border-radius: 10%;
   }
   .foto-blog {
     animation-name: blog;
@@ -940,56 +959,67 @@ padding-left: 2px;
     margin-top: 10px;
     margin: 20px;
     margin-bottom: 2px;
+    font-size: 22px;
   }
 .itemp{
-  font-size: 20px;
+  font-size: 22px;
   margin-top: 2px;
   text-align: center;
 }
 
-  .blogg{
+.blogg{
   font-family: 'Merriweather', serif;
-  }
+  font-size: 28px;
+}
 
-  .item3 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin: 25px 0px;
-    grid-column: 1/1;
-    grid-row: 3/3;
-    padding-bottom: 20px;
-  }
-  .item3-fotos {
-    height: 250px;
-    width: 400px;
-    border-radius: 30px;
-    animation-name: fotos;
-    animation-timing-function: ease-in-out;
-    animation: fotos 4000ms;
-    animation-iteration-count: 2;
-    animation-duration: 2s;
-  }
+.item3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 25px 0px;
+  grid-column: 1/1;
+  grid-row: 3/3;
+  padding-bottom: 20px;
+}
+.item3-fotos {
+  height: 300px;
+  width: 450px;
+  border-radius: 30px;
+  animation-name: fotos;
+  animation-timing-function: ease-in-out;
+  animation: fotos 4000ms;
+  animation-iteration-count: 2;
+  animation-duration: 3s;
+}
+.item3-fotos:hover{
+  height: 350px;
+  width: 500px;
+  transition: all 2s;
+}
 
-  .item4 {
-    display: flex;
-    justify-content: space-evenly;
-    grid-column: 1/1;
-    grid-row: 4/4;
-    padding-top: 10px;
-  }
-  .item4-fotos {
-    height: 250px;
-    width: 400px;
-    border-radius: 30px;
-    margin-bottom: 20px;
-    animation-name: fotos;
-    animation-timing-function: ease-in;
-    animation: fotos 4000ms;
-    animation-iteration-count: 2;
-    animation-duration: 2s;
-  }
-  
+.item4 {
+  display: flex;
+  justify-content: space-evenly;
+  grid-column: 1/1;
+  grid-row: 4/4;
+  padding-top: 10px;
+}
+.item4-fotos {
+  height: 300px;
+  width: 450px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  animation-name: fotos;
+  animation-timing-function: ease-in;
+  animation: fotos 4000ms;
+  animation-iteration-count: 2;
+  animation-duration: 3s;
+}
+.item4-fotos:hover{
+  height: 350px;
+  width: 500px;
+  transition: all 2s;
+}
   @keyframes fotos {
     0% {
       border-radius: 40%;
@@ -1059,9 +1089,10 @@ padding-left: 2px;
     margin: 20px 5px;
   }
   .item3-fotos {
-    height: 350px;
+    height: 300px;
     width: 500px;
     padding: 15px 0px;
+    border-radius: 50px;
   }
   .item4 {
     display: flex;
@@ -1069,11 +1100,17 @@ padding-left: 2px;
     align-items: center;
   }
   .item4-fotos {
-    height: 350px;
+    height: 300px;
     width: 500px;
     padding: 15px 0px;
     margin-bottom: 10px;
+    border-radius: 50px;
   }
+  .item3-fotos:hover, .item4-fotos:hover{
+    width: 550px;
+    height: 350px;
+    transition: all 2s;
+}
 }
 @media (max-width: 768px) {
   .grid-container {
@@ -1132,9 +1169,10 @@ padding-left: 2px;
     margin: 20px 5px;
   }
   .item3-fotos {
-    height: 250px;
-    width: 300px;
+    height: 300px;
+    width: 450px;
     padding: 15px 0px;
+    border-radius: 40px;
   }
   .item4 {
     display: flex;
@@ -1142,11 +1180,46 @@ padding-left: 2px;
     align-items: center;
   }
   .item4-fotos {
-    height: 250px;
-    width: 300px;
+    height: 300px;
+    width: 450px;
     padding: 15px 0px;
     margin-bottom: 10px;
+    border-radius: 40px;
   }
+  .item3-fotos:hover, .item4-fotos:hover{
+    height: 340px;
+    width: 480px;
+}
+}
+@media (max-width:486px) {
+.item3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 5px;
+}
+.item3-fotos {
+  height: 250px;
+  width: 300px;
+  padding: 15px 0px;
+  border-radius: 2px;
+}
+.item4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.item4-fotos {
+  height: 250px;
+  width: 300px;
+  padding: 15px 0px;
+  margin-bottom: 10px;
+  border-radius: 2px;
+}
+.item3-fotos:hover, .item4-fotos:hover{
+  height: 250px;
+  width: 300px;
+}
 }
 
 /*Autor*/
