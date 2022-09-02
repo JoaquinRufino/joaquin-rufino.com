@@ -23,18 +23,25 @@ body{
   font-family: splash, cursive;
   font-size: 30px;
   text-decoration: none;
-  color: white !important;
+  color: white;
   padding: 10px;
+}
+
+.font:hover{
+  color: white;
 }
 
 /*menu hamburguesa*/
 .nav-link {
-  color: white !important;
+  color: white;
   font-family: "Merriweather", serif;
   font-size: 18px;
   margin: 0px 5px;
   padding-bottom: 5px;
   text-decoration: none;
+}
+.nav-link:hover{
+  color: white;
 }
 
 #navbarSupportedContent {
@@ -111,6 +118,57 @@ body{
 .pinterest:hover {
   width: 40px;
   height: 40px;
+}
+
+/*pagina404*/
+.body404{
+  background-image:linear-gradient(#010101 , rgb(58, 57, 57));
+  max-width: 100%;
+  height: 500px;
+}
+.error-404{
+  background-image: url(../assets/brackground/404.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 100%;
+  height: 700px;
+}
+.section404{
+  display: flex;
+  align-items: flex-start;
+  width: 600px;
+  margin-left: 5px;
+  margin-top: 20px;
+}
+
+.errorp{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.estilo404{
+  font-family: 'Rubik Dirt', cursive;
+  font-size: 30px;
+  color: black;
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+.estilos404{
+  font-family: 'Rubik Dirt', cursive;
+  color: white;
+  margin-top: 0px;
+  padding: 5px 10px;
+  font-size: 22px;
+  background-color: rgb(14, 12, 12);
+  background-image: linear-gradient(white, rgb(22, 21, 21), black);
+  border-radius: 20px;
+}
+.estilos404:hover{
+  color: white;
+  font-size: 24px;
+  transition: all 1.5s;
 }
 
 @media (max-width: 767px) {
@@ -223,8 +281,8 @@ body{
 
   .derechos {
     color: white;
-    padding: 20px 20px;
-    font-size: 16px;
+    padding: 20px 2px;
+    font-size: 18px;
     margin-left: 5px;
     font-family: 'lato regular ', serif;
   }
