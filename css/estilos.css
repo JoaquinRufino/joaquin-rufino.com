@@ -1030,6 +1030,7 @@ padding-left: 2px;
   font-size: 28px;
 }
 
+
 .item3 {
   display: flex;
   flex-direction: row;
@@ -1091,6 +1092,16 @@ padding-left: 2px;
     }
   }
 }
+.containerdiv{
+  max-width: 100%;
+  background-color: black;
+  margin-left: 0px;
+  padding-left: 2px;
+}
+.fotoslider1{
+  border-radius: 5px; 
+}
+
 @media (max-width: 992px) {
   .grid-container {
     font-family: url(../assets/font/Lato-Regular.ttf);
@@ -1366,7 +1377,8 @@ padding-left: 2px;
   }
   .autor-p {
     color: white;
-    font-size: 20px;
+    font-size: 24px;
+    line-height: normal;
     margin-right: 5px;
     text-align: center;
     padding: 5px;
@@ -1417,5 +1429,6 @@ form label input {
 .form-control{
   color: black;
 }
+
 
 /*# sourceMappingURL=estilos.css.map */
