@@ -153,7 +153,7 @@ for (let i=1; i<=3; i++){
     alert("El total es: $"+acumulador);
 }
 
-
+/*
 //algoritmo ejercicio a resolver
 //solicitar a un alumno 3 notas de la materia informatica y luego mostrarle el promedio de las mismas
 //si el promedio es mayor a 7 indicarle que aprobo. sino que debe recuperar
@@ -171,6 +171,51 @@ if(promedio>=7){
     alert("Debes recuperar la materia :(")
 }
 
+console.log ("Lista de compras");
+let producto = prompt("Ingresa el producto (s para salir)");
+while (producto!=("s")){
+    console.log(producto);
+    producto= prompt("Ingresa el producto (s para salir)");
+}
+
+let dato;
+do{
+    dato= prompt("Ingresa tus datos (salir para finalizar)");
+    if (dato != "salir"){
+        console.log (dato);
+    }
+}while(dato!="salir")
+
+
+let fruta= prompt ("Ingrese la fruta y le dire el precio por kg (s para salir)")
+while (fruta!="s"){
+    switch (fruta){
+        case "manzana":
+            console.log ("El precio de la manzana es 250$");
+            break;
+        case "banana":
+            console.log("El precio de la banana es $150");
+            break;
+        case "frutilla":
+            console.log ("El precio de la frutilla es $500");
+            break;
+        //aqui no podemos utilizar operadores logicos
+        case "uva":
+        case "naranja":
+            console.log ("El precio de la uva y la naranja es de 350$");
+            break;
+        default:
+            console.log ("Fruta sin stock!!");
+            break;
+    }
+    fruta= prompt ("Ingrese la fruta y le dire el precio por kg (s para salir)")
+}
+*/
+
+let numero = parseInt (prompt("Ingrese la cantidad de veces que se repetira hola"));
+for (let i=1; i<=numero; i++){
+    console.log ("Hola");
+}
 
 
 
