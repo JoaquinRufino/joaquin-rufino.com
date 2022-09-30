@@ -336,3 +336,40 @@ alert("El total sin Iva es: $"+acumulador);
 //Calculo el precioProducto + IVA
 let nuevoPrecio = suma(acumulador, iva(precioProducto))
 alert ("El precio total con iva incluido es: $"+nuevoPrecio)
+
+//objetos literales 
+const libroJoaquin = {
+    autor:"Joaquin Rufino",
+    nombre: "Descubre y dejate descubrir",
+    editorial:"Penguin Random House",
+    paginas: 261,
+    tapa: "dura",
+    genero:"Auto-Ayuda"
+}
+//de esta forma podras observar todas propiedades con sus repectivos valores
+console.log(libroJoaquin);
+
+//obtener el valor con la variable del objeto, seguido de un punto y el nombre de la propiedad
+console.log("El autor del libro es: "+libroJoaquin.autor);
+console.log("El nombre del libro es: "+libroJoaquin.nombre);
+//esta es otra forma de obtener los valores(entre corchetes)
+console.log("El nombre de la editorial es: "+libroJoaquin["editorial"]);
+
+//de esta forma podemos tambien cambiar el valor de la propiedad, ya sea con el punto o entre corchetes
+libroJoaquin.tapa="Blanda";
+console.log(libroJoaquin);
+
+//funcion constructora
+function Libro(autor,paginas,genero,){
+    this.autor = autor;
+    this.paginas = paginas;
+    this.genero = genero;
+}
+
+const libro1 = new Libro("Joaquin Rufino", 261, "Auto-Ayuda");
+const libro2 = new Libro("Joaqui Rufino", 150, "Ficcion");
+
+console.log(libro1);
+//se actualiza de la misma manera que las funciones literales
+libro2.autor= "Joaquin";
+console.log(libro2);
