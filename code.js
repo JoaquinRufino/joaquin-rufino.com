@@ -27,11 +27,16 @@ let cadenaYNum = equipo + edad; //quedaria independiente23
 */
 
 //prompt - ingreso de datos
-let nombre = prompt ("Ingresa tu nombre");
-let email = prompt ("ingresa tu email");
-
-//alert - salida de datos 
-alert ("tenemos registrados tus datos " +nombre);
+if(
+    nombre = prompt ("Ingresa tu nombre"),
+    email = prompt ("ingresa tu email")){
+    //alert - salida de datos 
+    alert ("Tenemos registrados tus datos " +nombre);
+    }else{
+    if(nombre, email==""){
+    alert("No tenemos datos registrados")
+}
+}
 
 /*
 //algoritmo de suma con prompt y alert
@@ -50,7 +55,7 @@ if (edad == 18){
 }
 //= para asignar
 //== para comparar 
-*/
+
 
 let fechaNacimiento = parseInt(prompt("Ingrese la fecha de nacimiento"));
 let anioActual = parseInt(prompt("Ingrese el año actual"));
@@ -81,7 +86,7 @@ if((nombreIngresado !="") && (apellidoIngresado !="")){
     alert("Nombre: "+nombreIngresado +"\nApellido: "+apellidoIngresado); 
 }else{
     alert("Error: Ingresar nombre y apellido");
-}*/
+}
 
 //ciclos por conteo -for
 for (let i=1; i <=10; i++){
@@ -111,7 +116,7 @@ for (let i = 1; i <= 8; i++) {
     }
     // Informamos el turno asignado usando el número de repetición (i).
     alert(" Turno  N° "+i+" Nombre: "+ingresarNombre);
-}*/
+}
 
 //Solicitud de usuario y contraseña
 for (let i=1; i<=3; i++){ 
@@ -122,6 +127,21 @@ for (let i=1; i<=3; i++){
         break;
     }else{
         alert ("Usuario y/o contraseña invalidos, restan "+(3-i)+" intentos");
+    }
+}*/
+
+//ciclos
+for (let i=1; i<=3; i++){ 
+    let edadAutor= parseInt(prompt("¿Cuantos años tiene el autor?"));
+    let pais = prompt ("¿En que pais nacio el autor?");
+    if ((edadAutor == "23") && (pais == "Argentina" || pais=="argentina")){
+        alert ("Conoces al Autor!!");
+        break;
+    }else{
+        alert ("Edad y/o pais son incorrectos, restan "+(3-i)+" intentos");
+    }if(i==3){
+        alert("No conoces al Autor");
+        break;
     }
 }
 
@@ -145,13 +165,27 @@ for (let i=1; i<=3; i++){
     alert("La suma total es: "+acumulador);
 } */
 
-let acumulador = 50;
-for (let i=1; i<=3; i++){
-    let valor = parseInt(prompt("Ingrese la cantidad que quiere"));
-    console.log ("El usuario ingreso el valor: "+valor);
-    acumulador = valor * acumulador;
-    alert("El total es: $"+acumulador);
+/*//aqui tuve problemas para resolver el iva por el acumulador
+let acumulador = 2500;
+//for (let i=1; i<=1; i++) tenia que sacar el for of para que no quede de forma local
+let valor = parseInt(prompt("Ingrese la cantidad de ejemplares que quieras"));
+acumulador = valor * acumulador;
+alert("El total es: $"+acumulador);
+
+function calcularIva (precio){
+return precio = 0.21;
 }
+
+let precio= 0.21;
+let ivaCalculado = calcularIva (acumulador);
+
+function calcularPrecioFinal (acumulador, valor, precio){
+return acumulador * valor * precio;
+}
+let precioFinal= calcularPrecioFinal(acumulador , valor , precio);
+alert ("El precio final con Iva incluido es $"+precioFinal);
+*/
+
 
 /*
 //algoritmo ejercicio a resolver
@@ -210,16 +244,95 @@ while (fruta!="s"){
     }
     fruta= prompt ("Ingrese la fruta y le dire el precio por kg (s para salir)")
 }
-*/
 
 let numero = parseInt (prompt("Ingrese la cantidad de veces que se repetira hola"));
 for (let i=1; i<=numero; i++){
     console.log ("Hola");
 }
 
+//funciones sin parametros
+function saludar (){
+    console.log ("Buenos dias chicos");
+}
+
+saludar ();
 
 
+function sumar(){
+    let num1 = parseInt (prompt("Ingresa el primer numero"));
+    let num2 = parseInt (prompt("Ingresa el segundo numero")); 
+    let resultado = num1 + num2;
+    console.log ("El resultado es: "+resultado);
+}
+sumar ();
+
+for (let i=1; i<=3; i++){
+    sumar ();
+}
+
+//funciones con parametros
+function armarFrase(palabra1,palabra2){
+    console.log("La frase es: "+palabra1+" "+palabra2+" .");
+}
+armarFrase("tengo","sueño");
+armarFrase("buenas", "noches");
+
+let p1 = prompt ("ingresa la primera palabra para la frase");
+let p2 = prompt ("Ingresa la segunda palabra para la frase");
+
+armarFrase(p1,p2);
+*/
+
+function calcularEdad(anioNac,anioActual){
+    let edad=anioActual - anioNac;
+    alert("Tienes "+edad+" años");
+}
+
+calcularEdad (parseInt(prompt("Ingresa tu año de nacimiento")),prompt("Ingresar año actual"));
+
+/*
+//calculadora
+function calculadora(primerNumero, segundoNumero, operacion) {
+    switch (operacion) {
+        case "+":
+            return primerNumero + segundoNumero;
+            break;
+            case "-":
+                return primerNumero - segundoNumero;
+                break;
+                case "*":
+                    return primerNumero * segundoNumero;
+                    break;
+                    case "/":
+                        return primerNumero / segundoNumero;
+                        break;
+                        default:
+                            return 0;
+            break;
+    }
+}
+alert (calculadora(10, 5, "*"));
+*/
+
+/*
+//funciones anonimas
+const descuento = function (precio){return precio * 0.10}
+console.log (descuento(2000));
+
+//funcion flecha (arrow function)
+const suma = (num1,num2,num3)=> num1+num2+num3;
+console.log (suma(5,10,5));*/
 
 
-
-
+//calcular precio
+const suma  = (a,b) => a + b
+//Si una función es una sola línea con retorno y un parámetro puede evitar escribir los ()
+const iva   = x => x * 0.21
+let acumulador=0;
+let precioProducto  = 2500
+let valor = parseInt(prompt("Ingrese la cantidad de ejemplares que quieras"));
+acumulador = valor * precioProducto;
+alert("El total sin Iva es: $"+acumulador);
+//Calculo el precioProducto + IVA
+let nuevoPrecio = suma(acumulador, iva(precioProducto))
+alert ("El precio total con iva incluido es: $"+nuevoPrecio)
