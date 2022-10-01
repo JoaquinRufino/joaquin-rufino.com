@@ -373,3 +373,104 @@ console.log(libro1);
 //se actualiza de la misma manera que las funciones literales
 libro2.autor= "Joaquin";
 console.log(libro2);
+
+/*
+//otra funcion constructora
+
+function Ejemplar(objLiteral){
+this.autor=objLiteral.autor;
+this.nombre=objLiteral.nombre;
+this.genero=objLiteral.genero;
+}
+
+const ejemplar1 = new Ejemplar(libroJoaquin)
+console.log(ejemplar1);
+
+
+//metodos de string
+let frase = "Hola, mi nombre es Joaquin";
+//Propiedad de objeto String: Largo de la cadena. puedes realizarlo con un prompt para que ingreses los datos que quieras
+console.log("La frase contiene: "+frase.length+" caracteres");
+//Método de objeto String: Pasar a minúscula.
+console.log(frase.toLowerCase());
+//Método de objeto String: Pasar a mayúscula.
+console.log(frase.toUpperCase());
+
+
+//metodos personalizados
+function Automovil(marca, modelo){
+    this.marca = marca;
+    this.modelo = modelo;
+    //metodo para automovil
+    this.mostrarAuto = function (){console.log("Soy un "+this.marca+" "+this.modelo)};
+}
+
+const automovil1 = new Automovil ("Vw", "Amarok");
+automovil1.mostrarAuto ();
+const automovil2 = new Automovil ("Fiat", "Palio");
+automovil2.mostrarAuto ();
+
+
+//Diapo25
+const persona1 = { nombre: "Homero", edad: 39, calle: "Av. Siempreviva 742"};
+//devuelve true porque la clave "nombre" existe en el objeto persona1
+console.log( "nombre" in persona1);
+//devuelve false porque la clave "origen" no existe en el objeto persona1
+console.log( "origen" in persona1);
+//recorremos todas las propiedades del objeto con el ciclo for...in
+for (const propiedad in persona1) {
+    console.log("Propiedad: "+propiedad)
+    console.log("Valor: "+persona1[propiedad]);
+}
+
+
+//clases
+class Computadora{
+    constructor(tipo, sistema){
+        this.tipo = tipo;
+        this.sistema = sistema;
+    }
+    //metodos
+    mostrarCompu(){
+        console.log(this.tipo+" "+this.sistema);
+        //tambien podemos hacerlo con return en reemplazo de console (se hace un string)
+        // return "Detalles de la Pc: "+this.tipo+" "+this.sistema;
+    }
+    actualizarSistema(nuevoSistema){
+    this.sistema = nuevoSistema;
+    console.log("Sistema actualizado");
+    }
+}
+
+const compu1 = new Computadora ("Notebook", "macOs");
+const compu2 = new Computadora ("escritorio", "Linux");
+
+console.log(compu1);
+compu2.mostrarCompu();
+//y si queremos mostrar los detalles del return en la pagina hacemos..
+//console.log(compu2.mostrarCompu());
+
+compu2.actualizarSistema("Windows 11");
+*/
+
+/*recordar este ejemplo para ponerlo en practica
+//sirve para un carrito de compras cuando se venda o no se venda un producto
+class Producto {
+    constructor(nombre, precio) {
+        this.nombre  = nombre.toUpperCase();
+        this.precio  = parseFloat(precio);
+        this.vendido = false;
+    }
+    sumaIva() {
+        this.precio = this.precio * 1.21;
+    }
+    vender() {
+        this.vendido = true;
+    }
+}
+const producto1 = new Producto("libro1", "2500");
+const producto2 = new Producto("libro2", "1500");
+producto1.sumaIva();
+producto2.sumaIva();
+producto1.vender();
+*/
