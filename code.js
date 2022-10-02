@@ -290,7 +290,7 @@ function calcularEdad(anioNac,anioActual){
 
 calcularEdad (parseInt(prompt("Ingresa tu año de nacimiento")),prompt("Ingresar año actual"));
 
-/*
+
 //calculadora
 function calculadora(primerNumero, segundoNumero, operacion) {
     switch (operacion) {
@@ -311,8 +311,9 @@ function calculadora(primerNumero, segundoNumero, operacion) {
             break;
     }
 }
-alert (calculadora(10, 5, "*"));
-*/
+let resultado = calculadora(parseFloat(prompt("Ingresa el primer numero para calcular")),parseFloat(prompt("Ingrese el segundo numero")),prompt("Ingrese el operador que desea(+ , - , * o /"));
+alert("El resultado de la operacion es: "+resultado);
+
 
 /*
 //funciones anonimas
@@ -474,3 +475,36 @@ producto1.sumaIva();
 producto2.sumaIva();
 producto1.vender();
 */
+
+//ejercicio 1(cotizador de dolares/pesos)
+const DOLAR_COMPRA=284;
+const DOLAR_VENTA=288;
+function cotizarDolar(pesos){
+    let conversionDolar = pesos / DOLAR_VENTA;
+    return conversionDolar;
+}
+
+function cotizarPesos(dolar){
+    let conversionPesos = dolar * DOLAR_COMPRA;
+    return conversionPesos;
+}
+
+let tipoCotizacion = prompt("****Cotizador *****\n1-Cambiar pesos a dolares\n2-Cambiar dolares a pesos");
+
+if(tipoCotizacion=="1"){
+    let pesosACambiar =parseFloat(prompt("Ingresa la cantidad en pesos"));
+    let dolares = cotizarDolar (pesosACambiar);
+    alert("Con $"+pesosACambiar+" podes comprar U$$"+dolares);
+}else if (tipoCotizacion=="2"){
+    let dolaresACambiar =parseFloat(prompt("Ingresa la cantidad en dolares"));
+    let pesos = cotizarPesos (dolaresACambiar);
+    alert("Con U$$"+dolaresACambiar+" podes comprar $"+pesos);
+}else{
+    for(let i=1; i<=2; i++){
+        alert("Debes ingresar la opcion 1 y/o 2.\n Intenta nuevamente, restan "+(2-i)+" intentos"); 
+        tipoCotizacion = prompt("****Cotizador *****\n1-Cambiar pesos a dolares\n2-Cambiar dolares a pesos"); 
+        alert ("Error de opcion");
+        break;
+}
+}
+
