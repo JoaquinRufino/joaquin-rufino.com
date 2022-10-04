@@ -527,7 +527,7 @@ class Tienda{
     }
 }
 
-const tienda1 = new Tienda(prompt("Indica el nombre, direccion, propietario y rubro de la tienda"));
+//const tienda1 = new Tienda(prompt("Indica el nombre, direccion, propietario y rubro de la tienda"));
 const tienda2 = new Tienda("walmart","moreno", "alan","alimentos");
 const tienda3 = new Tienda(prompt("Indica el nombre, direccion, propietario y rubro de la tienda"));
 
@@ -537,9 +537,10 @@ let estadoTienda=tienda3.estaAbierto();
 for(let i=1; i<=3; i++){
     let horario =parseInt(prompt("Ingresa el horario en el que iras a la tienda"));
     //aca declaramos la variable si no la declaramos por fuera  
-    let estadoTienda = tienda1.estaAbierto(horario);
+    let estadoTienda = tienda3.estaAbierto(horario);
     if (estadoTienda==true){
         alert("La tienda esta abierta!! Te esperamos!!");
+        break;
     }else{
         alert("Esta cerrado!! Abre de 8-12AM / 15--19PM");
     }
