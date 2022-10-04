@@ -547,3 +547,49 @@ for(let i=1; i<=3; i++){
 }
 
 
+
+
+
+
+
+
+//metodo indexOf - devuelve el indice en el que se encuentra un elemento
+const alumnos = ["Gomez","Perez","Gallegos","Torres","Galvez","Aguilar"];
+
+let posicion = alumnos.indexOf("Gallegos");
+console.log("El alumno se encuentra en la posicion "+posicion);
+
+posicion = alumnos.indexOf("Marquez");
+console.log("El alumno se encuentra en la posicion "+posicion);
+
+let apellido=prompt("Ingresa el apellido del alumno");
+posicion = alumnos.indexOf(apellido);
+
+if(posicion != -1){
+    console.log("El alumno se encuentra en la posicion "+posicion);
+}else{
+    console.log("El alumno no se encuentra en éste grupo");
+}
+
+
+//array
+//listas
+
+const listaCompras = ["fideos", "papas", "pan","lechuga", "espinaca", "sal", "harina", "mandarinas"];
+console.log (listaCompras);
+console.log(listaCompras[3]);
+console.log(listaCompras[0]+" y "+listaCompras[5]);
+
+//recorrer un array
+for (let i=0; i<=7; i++){
+    console.log(listaCompras[i]);
+}
+
+//longitud del array
+
+let cantidadElementos = listaCompras.length;
+console.log("El listado de compras tiene "+cantidadElementos+" elementos");
+//de esta manera no hace falta ir contando porque el length pone todos los elementos. pones el < estricto para que no vaya al octavo elemento inclusive 
+for (let i=0; i<listaCompras.length; i++){
+    console.log(listaCompras[i]);
+}
