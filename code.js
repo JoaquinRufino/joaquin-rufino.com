@@ -552,7 +552,7 @@ for(let i=1; i<=3; i++){
 
 
 
-
+/*
 //metodo indexOf - devuelve el indice en el que se encuentra un elemento
 const alumnos = ["Gomez","Perez","Gallegos","Torres","Galvez","Aguilar"];
 
@@ -569,12 +569,11 @@ if(posicion != -1){
     console.log("El alumno se encuentra en la posicion "+posicion);
 }else{
     console.log("El alumno no se encuentra en éste grupo");
-}
+}*/
 
 
 //array
 //listas
-
 const listaCompras = ["fideos", "papas", "pan","lechuga", "espinaca", "sal", "harina", "mandarinas"];
 console.log (listaCompras);
 console.log(listaCompras[3]);
@@ -586,10 +585,32 @@ for (let i=0; i<=7; i++){
 }
 
 //longitud del array
-
 let cantidadElementos = listaCompras.length;
 console.log("El listado de compras tiene "+cantidadElementos+" elementos");
 //de esta manera no hace falta ir contando porque el length pone todos los elementos. pones el < estricto para que no vaya al octavo elemento inclusive 
 for (let i=0; i<listaCompras.length; i++){
     console.log(listaCompras[i]);
 }
+
+//metodo push - agrega un elemento a la lista
+listaCompras.push("Miel");
+console.log(listaCompras);
+
+//metodo unshift
+listaCompras.unshift("banana");
+console.log(listaCompras);
+
+//metodo poop (quita el ultimo elemento)
+listaCompras.pop();
+console.log(listaCompras);
+
+//metodo shift (quita el primer elemento de la lista)
+listaCompras.shift();
+console.log(listaCompras);
+
+//metodo splice elimina elementos en cualquier posicion
+listaCompras.splice(2,2);
+console.log(listaCompras);
+
+//metodo join(une todos los elementos en un string con un separador)
+console.log(listaCompras.join(" ** "));
