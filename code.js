@@ -546,12 +546,6 @@ for(let i=1; i<=3; i++){
     }
 }
 
-
-
-
-
-
-
 /*
 //metodo indexOf - devuelve el indice en el que se encuentra un elemento
 const alumnos = ["Gomez","Perez","Gallegos","Torres","Galvez","Aguilar"];
@@ -570,7 +564,6 @@ if(posicion != -1){
 }else{
     console.log("El alumno no se encuentra en éste grupo");
 }*/
-
 
 //array
 //listas
@@ -614,3 +607,17 @@ console.log(listaCompras);
 
 //metodo join(une todos los elementos en un string con un separador)
 console.log(listaCompras.join(" ** "));
+
+//metodo concat (union de cadenas, une dos array)
+const bebidas=["coca cola", "Agua"];
+const listaCompleta = listaCompras.concat (bebidas);
+console.log(listaCompleta);
+
+//metodo slice(ultimo elemento seleccionado es excluyente)copia una parte del array
+const copia = listaCompleta.slice(4,7);
+console.log(copia);
+
+//metodo indexOF (DEVUELVE EL INDICE EN EL QUE SE ENCUENTRA UN ELEMENTO)
+
+
+
