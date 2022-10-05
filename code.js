@@ -546,24 +546,6 @@ for(let i=1; i<=3; i++){
     }
 }
 
-/*
-//metodo indexOf - devuelve el indice en el que se encuentra un elemento
-const alumnos = ["Gomez","Perez","Gallegos","Torres","Galvez","Aguilar"];
-
-let posicion = alumnos.indexOf("Gallegos");
-console.log("El alumno se encuentra en la posicion "+posicion);
-
-posicion = alumnos.indexOf("Marquez");
-console.log("El alumno se encuentra en la posicion "+posicion);
-
-let apellido=prompt("Ingresa el apellido del alumno");
-posicion = alumnos.indexOf(apellido);
-
-if(posicion != -1){
-    console.log("El alumno se encuentra en la posicion "+posicion);
-}else{
-    console.log("El alumno no se encuentra en éste grupo");
-}*/
 
 //array
 //listas
@@ -618,6 +600,47 @@ const copia = listaCompleta.slice(4,7);
 console.log(copia);
 
 //metodo indexOF (DEVUELVE EL INDICE EN EL QUE SE ENCUENTRA UN ELEMENTO)
+
+//metodo indexOf - devuelve el indice en el que se encuentra un elemento
+/*const alumnos = ["Gomez","Perez","Gallegos","Torres","Galvez","Aguilar"];
+
+let posicion = alumnos.indexOf("Gallegos");
+console.log("El alumno se encuentra en la posicion "+posicion);
+
+posicion = alumnos.indexOf("Marquez");
+console.log("El alumno se encuentra en la posicion "+posicion);
+
+let apellido=prompt("Ingresa el apellido del alumno");
+posicion = alumnos.indexOf(apellido);
+
+if(posicion != -1){
+    console.log("El alumno se encuentra en la posicion "+posicion);
+}else{
+    console.log("El alumno no se encuentra en éste grupo");
+}*/
+
+//metodo indexOf
+const libros = ["Descubre y dejate descubrir" , "descubre y dejate descubrir", "Proximamente"];
+
+let disponible = libros.indexOf ("Descubre y dejate descubrir" , "descubre y dejate descubrir")
+
+let nombreLibro = prompt("Ingresa el nombre del libro a comprar");
+disponible = libros.indexOf(nombreLibro);
+
+if(disponible !=-1){
+    alert("El libro, Descubre y dejate descubrir se encuentra disponible");
+}else{
+    alert("No tenemos disponible ese libro. Sin stock");
+}
+
+//metodoinclude - si esta el elemento devuelve true si no se encuentra devuelve false
+const edades = [23, 24,28,35];
+let existe = edad.includes(23);
+console.log(existe);
+
+//reverse - invierte el orden del array
+edades.reverse();
+console.log(edades);
 
 
 
