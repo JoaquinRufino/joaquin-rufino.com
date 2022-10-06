@@ -633,14 +633,41 @@ if(disponible !=-1){
     alert("No tenemos disponible ese libro. Sin stock");
 }
 
-//metodoinclude - si esta el elemento devuelve true si no se encuentra devuelve false
+//metodoincludes - si esta el elemento devuelve true si no se encuentra devuelve false
 const edades = [23, 24,28,35];
-let existe = edad.includes(23);
+let existe = edades.includes(23);
 console.log(existe);
 
-//reverse - invierte el orden del array
+//reverse - invierte el orden del array de atras para adelante se posicionan
 edades.reverse();
 console.log(edades);
 
+//array de objetos
+
+const LibrosDisponible = [
+    {
+        nombre:"Descubre y dejate descubrir",
+        autor: "Joaquin Rufino",
+        publicacion: 2019,
+        precio: 2500,
+        genero:"Auto-Ayuda"
+    },
+    {
+        nombre:"Sin nombre",
+        autor: "Joaquin Rufino",
+        publicacion: "Proximamente, año 2024",
+        precio: "Sin precio a la venta",
+        genero:"Auto-Ayuda"
+    },
+    {
+        nombre:"Sin nombre",
+        autor: "Joaquin Rufino",
+        publicacion: "Proximamente, año 2026",
+        precio: "Sin precio a la venta",
+        genero:"Ficcion"
+    }
+];
+
+console.log(LibrosDisponible);
 
 
