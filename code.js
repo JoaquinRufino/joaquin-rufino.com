@@ -667,7 +667,32 @@ const LibrosDisponible = [
         genero:"Ficcion"
     }
 ];
+//de esta forma muestras en consola el objeto que indicas dentro de corchete
+console.log(LibrosDisponible[1]);
 
-console.log(LibrosDisponible);
+//for ...of(recorre todo el array de objetos)
+for (const libro of LibrosDisponible){
+alert(libro);
+}
 
-
+//diapo(puedo utilizarlo en los libros)
+/*
+class Producto {
+    constructor(nombre, precio) {
+        this.nombre  = nombre.toUpperCase();
+        this.precio  = parseFloat(precio);
+        this.vendido = false;
+    }
+    sumaIva() {
+        this.precio = this.precio * 1.21;
+    }
+}
+//Declaramos un array de productos para almacenar objetos
+const productos = [];
+productos.push(new Producto("arroz", "125"));
+productos.push(new Producto("fideo", "70"));
+productos.push(new Producto("pan", "50"));
+//Iteramos el array con for...of para modificarlos a todos
+for (const producto of productos)
+    producto.sumaIva();
+*/
