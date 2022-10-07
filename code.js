@@ -546,7 +546,7 @@ for(let i=1; i<=3; i++){
     }
 }
 
-
+/*
 //array
 //listas
 const listaCompras = ["fideos", "papas", "pan","lechuga", "espinaca", "sal", "harina", "mandarinas"];
@@ -602,7 +602,7 @@ console.log(copia);
 //metodo indexOF (DEVUELVE EL INDICE EN EL QUE SE ENCUENTRA UN ELEMENTO)
 
 //metodo indexOf - devuelve el indice en el que se encuentra un elemento
-/*const alumnos = ["Gomez","Perez","Gallegos","Torres","Galvez","Aguilar"];
+const alumnos = ["Gomez","Perez","Gallegos","Torres","Galvez","Aguilar"];
 
 let posicion = alumnos.indexOf("Gallegos");
 console.log("El alumno se encuentra en la posicion "+posicion);
@@ -617,7 +617,8 @@ if(posicion != -1){
     console.log("El alumno se encuentra en la posicion "+posicion);
 }else{
     console.log("El alumno no se encuentra en éste grupo");
-}*/
+}
+
 
 //metodo indexOf
 const libros = ["Descubre y dejate descubrir" , "descubre y dejate descubrir", "Proximamente"];
@@ -642,8 +643,8 @@ console.log(existe);
 edades.reverse();
 console.log(edades);
 
-//array de objetos
 
+//array de objetos
 const LibrosDisponible = [
     {
         nombre:"Descubre y dejate descubrir",
@@ -675,8 +676,8 @@ for (const libro of LibrosDisponible){
 alert(libro);
 }
 
+
 //diapo(puedo utilizarlo en los libros)
-/*
 class Producto {
     constructor(nombre, precio) {
         this.nombre  = nombre.toUpperCase();
@@ -696,3 +697,64 @@ productos.push(new Producto("pan", "50"));
 for (const producto of productos)
     producto.sumaIva();
 */
+
+
+//funciones de orden superior
+//metodos de busqueda y transformacion
+//estos metodos los voy a implementar para finaliar mi proyecto
+const libros= [
+    {
+        isbn:"9788418073328",
+        titulo: "Descubre y dejate Descubrir",
+        publicacion:2019,
+        paginas:261,
+        autor:"Joaquin Rufino",
+        genero:"Auto-Ayuda",
+        editorial:"Penguin Random House",
+        precio: 2500
+    },
+    {
+        isbn:"078641807324",
+        titulo: "Sin nombre",
+        publicacion:"Proximamente, año 2024",
+        paginas:"+150",
+        autor:"Joaquin Rufino",
+        genero:"Auto-Ayuda",
+        editorial:"Penguin Random House",
+        precio: 1500
+    },
+    {
+        isbn:"9280418073820",
+        titulo: "Sin nombre",
+        publicacion:"Proximamente, año 2026",
+        paginas:"+200",
+        autor:"Joaquin Rufino",
+        genero:"Ficcion",
+        editorial:"Penguin Random House",
+        precio: 2000
+    },
+];
+
+//forEach
+//si no es una sola linea de codigo deberas poner las llaves
+//si es una sola linea pones la funcion flecha y el console o el alert
+libros.forEach((libro) => console.log(libro.titulo));
+
+
+//find
+//si saco esto por alert me saldra el nombre del object, por esa razon lo mostramos por consola
+//guarda en la constante libroDisponible el primer objeto que cumpla con la condicion libro.titulo=="Descubre y dejate descubrir"
+let libroDisponible= libros.find((libro) => libro.titulo == "Descubre y dejate Descubrir");
+console.log(libroDisponible);
+
+libroDisponible = libros.find ((libro) => libro.titulo == "Otro nombre");
+if (libroDisponible != undefined){
+    console.log("Libro disponible");
+}else{
+    console.log("El libro buscado no esta en stock");
+}
+
+//filter
+//guarda en un array todos los objetos que cumplan con la condicion
+const listaEconomicos = libros.filter((libro) => libro.precio < 2200);
+console.log(listaEconomicos);
