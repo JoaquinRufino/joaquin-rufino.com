@@ -758,3 +758,7 @@ if (libroDisponible != undefined){
 //guarda en un array todos los objetos que cumplan con la condicion
 const listaEconomicos = libros.filter((libro) => libro.precio < 2200);
 console.log(listaEconomicos);
+
+//some - informa verdadero o false si existe algun elemento que cumpla con la condicion 
+const existe = libros.some((libro) => libro.genero == "Ficcion");
+console.log("Tienes stock del libro Ficcion? "+existe);
