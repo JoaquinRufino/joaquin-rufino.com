@@ -762,3 +762,29 @@ console.log(listaEconomicos);
 //some - informa verdadero o false si existe algun elemento que cumpla con la condicion 
 const existe = libros.some((libro) => libro.genero == "Ficcion");
 console.log("Tienes stock del libro Ficcion? "+existe);
+
+//map
+//nuevo array con elementos transformados
+const listaTitulos = libros.map((libro) => libro.titulo.toCamelCase());
+console.log(listaTitulos)
+
+const librosConIva = libros.map((libro) => {
+    return{
+        isbn: libro.isbn,
+        titulo: libro.titulo.toCamelCase,
+        publicacion: libro.publicacion,
+        paginas:libro.paginas,
+        autor:libro.autor,
+        genero:libro.genero,
+        editorial:libro.editorial,
+        precio:libro.precio * 1.21
+    }
+});
+console.log(librosConIva);
+
+//reduce
+const totalPrecios = libros.reduce((sumador, libro) => sumador + (libro.precio * 1.21), 0);
+console.log("Total $"+totalPrecios);
+
+
+
