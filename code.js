@@ -804,3 +804,21 @@ console.log("Tira los dados, te toco el numero: "+dado);
 let ahora = new Date();
 console.log("Fecha y hora actual: "+ahora);
 
+//ejercicio de helado
+/*
+const definirCompra = (n) =>{
+    let din = prompt(`Dinero de ${n}`);
+    if (din >= 0.6 && din <1) return (`${n}: helado de agua`);
+    if (din >= 1 && din <1.6) return (`${n}: helado de crema`);
+    if (din >= 1.6 && din <1.7) return (`${n}: helado de banana`);
+    if (din >= 1.7 && din <1.8) return (`${n}: helado de dulce de leche`);
+    if (din >= 1.8 && din <2.9) return (`${n}: helado de oreo`);
+    if (din >= 2) return (`${n}: pote de 1/4 kg`);
+    else return (`${n}: no te alcanza para comprar ningun helado`);
+}
+console.log(definirCompra("martin"));
+console.log(definirCompra("joaquin"));
+console.log(definirCompra("agustin"));
+*/
+
+
