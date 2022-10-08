@@ -765,7 +765,7 @@ console.log("Tienes stock del libro Ficcion? "+existe);
 
 //map
 //nuevo array con elementos transformados
-const listaTitulos = libros.map((libro) => libro.titulo.toCamelCase());
+const listaTitulos = libros.map((libro) => libro.titulo.toLowerCase());
 console.log(listaTitulos)
 
 const librosConIva = libros.map((libro) => {
@@ -785,6 +785,17 @@ console.log(librosConIva);
 //reduce
 const totalPrecios = libros.reduce((sumador, libro) => sumador + (libro.precio * 1.21), 0);
 console.log("Total $"+totalPrecios);
+/*
+//sort (ordena de forma ascendente o descendente. alfabeticamente tambien se puede)
+libros.sort((a,b) => a.precio - b.precio);
+console.log(libros);*/
 
+//ordenar alfabeticamente
+libros.sort((a,b) => a.titulo.localeCompare(b.titulo));
+console.log(libros);
+
+
+//Math
+//tirar un dado
 
 
