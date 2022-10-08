@@ -797,5 +797,10 @@ console.log(libros);
 
 //Math
 //tirar un dado
+let dado = math.round(math.random()*5+1);
+console.log("Tira los dados, te toco el numero: "+dado);
 
+//Date
+let ahora = new Date();
+console.log("Fecha y hora actual: "+ahora);
 
