@@ -794,18 +794,18 @@ console.log(libros);*/
 libros.sort((a,b) => a.titulo.localeCompare(b.titulo));
 console.log(libros);
 
-
+/*
 //Math
 //tirar un dado
 let dado = math.round(math.random()*5+1);
 console.log("Tira los dados, te toco el numero: "+dado);
-
+*/
 //Date
 let ahora = new Date();
 console.log("Fecha y hora actual: "+ahora);
 
-//ejercicio de helado
 /*
+//ejercicio de helado
 const definirCompra = (n) =>{
     let din = prompt(`Dinero de ${n}`);
     if (din >= 0.6 && din <1) return (`${n}: helado de agua`);
@@ -821,4 +821,28 @@ console.log(definirCompra("joaquin"));
 console.log(definirCompra("agustin"));
 */
 
+//ejercicio 2
+//primer persona que pasa despues de las 2 gratis
+//menores no pueden pasar
+let free = false;
 
+const validarCliente = (time) => {
+    let edad = prompt("¿Cual es tu edad?");
+    if (edad >= 18){
+        if (time >= 2 && time<7 && free == false){
+            alert("Podes pasar gratis. Sos la primer persona despues de las 2hs");
+            free = true;
+        }else {
+            alert (`Son las ${time}:00hs y podes pasar, pero tenes que pagar la entrada`);
+        }
+    }else{
+        alert("Sos menor de edad no podes pasar");
+    }
+}
+
+validarCliente(23);
+validarCliente(24);
+validarCliente(1);
+validarCliente(2);
+validarCliente(3.50);
+validarCliente(4);
