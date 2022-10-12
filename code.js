@@ -221,29 +221,6 @@ do{
 }while(dato!="salir")
 
 
-let fruta= prompt ("Ingrese la fruta y le dire el precio por kg (s para salir)")
-while (fruta!="s"){
-    switch (fruta){
-        case "manzana":
-            console.log ("El precio de la manzana es 250$");
-            break;
-        case "banana":
-            console.log("El precio de la banana es $150");
-            break;
-        case "frutilla":
-            console.log ("El precio de la frutilla es $500");
-            break;
-        //aqui no podemos utilizar operadores logicos
-        case "uva":
-        case "naranja":
-            console.log ("El precio de la uva y la naranja es de 350$");
-            break;
-        default:
-            console.log ("Fruta sin stock!!");
-            break;
-    }
-    fruta= prompt ("Ingrese la fruta y le dire el precio por kg (s para salir)")
-}
 
 let numero = parseInt (prompt("Ingrese la cantidad de veces que se repetira hola"));
 for (let i=1; i<=numero; i++){
@@ -282,47 +259,6 @@ let p2 = prompt ("Ingresa la segunda palabra para la frase");
 
 armarFrase(p1,p2);
 */
-
-function calcularEdad(anioNac,anioActual){
-    let edad=anioActual - anioNac;
-    alert("Tienes "+edad+" años");
-}
-
-calcularEdad (parseInt(prompt("Ingresa tu año de nacimiento")),prompt("Ingresar año actual"));
-
-
-//calculadora
-function calculadora(primerNumero, segundoNumero, operacion) {
-    switch (operacion) {
-        case "+":
-            return primerNumero + segundoNumero;
-            break;
-            case "-":
-                return primerNumero - segundoNumero;
-                break;
-                case "*":
-                    return primerNumero * segundoNumero;
-                    break;
-                    case "/":
-                        return primerNumero / segundoNumero;
-                        break;
-                        default:
-                            return 0;
-            break;
-    }
-}
-let resultado = calculadora(parseFloat(prompt("Ingresa el primer numero para calcular")),parseFloat(prompt("Ingrese el segundo numero")),prompt("Ingrese el operador que desea(+ , - , * o /"));
-alert("El resultado de la operacion es: "+resultado);
-
-
-/*
-//funciones anonimas
-const descuento = function (precio){return precio * 0.10}
-console.log (descuento(2000));
-
-//funcion flecha (arrow function)
-const suma = (num1,num2,num3)=> num1+num2+num3;
-console.log (suma(5,10,5));*/
 
 
 //calcular precio
@@ -375,84 +311,7 @@ console.log(libro1);
 libro2.autor= "Joaquin";
 console.log(libro2);
 
-/*
-//otra funcion constructora
 
-function Ejemplar(objLiteral){
-this.autor=objLiteral.autor;
-this.nombre=objLiteral.nombre;
-this.genero=objLiteral.genero;
-}
-
-const ejemplar1 = new Ejemplar(libroJoaquin)
-console.log(ejemplar1);
-
-
-//metodos de string
-let frase = "Hola, mi nombre es Joaquin";
-//Propiedad de objeto String: Largo de la cadena. puedes realizarlo con un prompt para que ingreses los datos que quieras
-console.log("La frase contiene: "+frase.length+" caracteres");
-//Método de objeto String: Pasar a minúscula.
-console.log(frase.toLowerCase());
-//Método de objeto String: Pasar a mayúscula.
-console.log(frase.toUpperCase());
-
-
-//metodos personalizados
-function Automovil(marca, modelo){
-    this.marca = marca;
-    this.modelo = modelo;
-    //metodo para automovil
-    this.mostrarAuto = function (){console.log("Soy un "+this.marca+" "+this.modelo)};
-}
-
-const automovil1 = new Automovil ("Vw", "Amarok");
-automovil1.mostrarAuto ();
-const automovil2 = new Automovil ("Fiat", "Palio");
-automovil2.mostrarAuto ();
-
-
-//Diapo25
-const persona1 = { nombre: "Homero", edad: 39, calle: "Av. Siempreviva 742"};
-//devuelve true porque la clave "nombre" existe en el objeto persona1
-console.log( "nombre" in persona1);
-//devuelve false porque la clave "origen" no existe en el objeto persona1
-console.log( "origen" in persona1);
-//recorremos todas las propiedades del objeto con el ciclo for...in
-for (const propiedad in persona1) {
-    console.log("Propiedad: "+propiedad)
-    console.log("Valor: "+persona1[propiedad]);
-}
-
-
-//clases
-class Computadora{
-    constructor(tipo, sistema){
-        this.tipo = tipo;
-        this.sistema = sistema;
-    }
-    //metodos
-    mostrarCompu(){
-        console.log(this.tipo+" "+this.sistema);
-        //tambien podemos hacerlo con return en reemplazo de console (se hace un string)
-        // return "Detalles de la Pc: "+this.tipo+" "+this.sistema;
-    }
-    actualizarSistema(nuevoSistema){
-    this.sistema = nuevoSistema;
-    console.log("Sistema actualizado");
-    }
-}
-
-const compu1 = new Computadora ("Notebook", "macOs");
-const compu2 = new Computadora ("escritorio", "Linux");
-
-console.log(compu1);
-compu2.mostrarCompu();
-//y si queremos mostrar los detalles del return en la pagina hacemos..
-//console.log(compu2.mostrarCompu());
-
-compu2.actualizarSistema("Windows 11");
-*/
 
 /*recordar este ejemplo para ponerlo en practica
 //sirve para un carrito de compras cuando se venda o no se venda un producto
@@ -507,7 +366,6 @@ if(tipoCotizacion=="1"){
         break;
 }
 }
-
 
 //ejercicio 2 clases
 class Tienda{
@@ -846,3 +704,5 @@ validarCliente(1);
 validarCliente(2);
 validarCliente(3.50);
 validarCliente(4);
+
+
