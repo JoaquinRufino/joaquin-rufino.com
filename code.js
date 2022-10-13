@@ -38,6 +38,24 @@ alert("El total sin Iva es: $"+acumulador);
 let nuevoPrecio = suma(acumulador, iva(precioProducto))
 alert ("El precio total con iva incluido es: $"+nuevoPrecio)
 
+
+const libroJoaquin = {
+    autor:"Joaquin Rufino",
+    nombre: "Descubre y dejate descubrir",
+    editorial:"Penguin Random House",
+    paginas: 261,
+    tapa: "dura",
+    genero:"Auto-Ayuda"
+}
+console.log(libroJoaquin);
+
+alert("El autor del libro es: "+libroJoaquin.autor);
+alert("El nombre del libro es: "+libroJoaquin.nombre);
+//esta es otra forma de obtener los valores(entre corchetes)
+alert("El nombre de la editorial es: "+libroJoaquin["editorial"]);
+
+
+
 //array de objetos
 const Libros= [
     {
@@ -72,15 +90,15 @@ const Libros= [
     },
 ];
 
-Libros.forEach((libro) => alert(libro.titulo));
+Libros.forEach((libro) => console.log(libro.titulo));
 
 
 //reduce
 const totalPrecios = Libros.reduce((sumador, libro) => sumador + (libro.precio * 1.21), 0);
-alert("La compra de los tres libros disponibles\nDa un total de $"+totalPrecios+" Con Iva incluido");
+console.log("La compra de los tres libros disponibles\nDa un total de $"+totalPrecios+" Con Iva incluido");
 
 
-
+//indexOf
 const libros = ["Descubre y dejate descubrir" , "descubre y dejate descubrir"];
 
 let disponible = libros.indexOf ("Descubre y dejate descubrir" , "descubre y dejate descubrir")
