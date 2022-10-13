@@ -38,4 +38,62 @@ alert("El total sin Iva es: $"+acumulador);
 let nuevoPrecio = suma(acumulador, iva(precioProducto))
 alert ("El precio total con iva incluido es: $"+nuevoPrecio)
 
+//array de objetos
+const Libros= [
+    {
+        isbn:"9788418073328",
+        titulo: "Descubre y dejate Descubrir",
+        publicacion:2019,
+        paginas:261,
+        autor:"Joaquin Rufino",
+        genero:"Auto-Ayuda",
+        editorial:"Penguin Random House",
+        precio: 2500
+    },
+    {
+        isbn:"078641807324",
+        titulo: "Sin nombre",
+        publicacion:"Proximamente, año 2024",
+        paginas:"+150",
+        autor:"Joaquin Rufino",
+        genero:"Auto-Ayuda",
+        editorial:"Penguin Random House",
+        precio: 1500
+    },
+    {
+        isbn:"9280418073820",
+        titulo: "Sin nombre",
+        publicacion:"Proximamente, año 2026",
+        paginas:"+200",
+        autor:"Joaquin Rufino",
+        genero:"Ficcion",
+        editorial:"Penguin Random House",
+        precio: 2000
+    },
+];
+
+Libros.forEach((libro) => alert(libro.titulo));
+
+
+//reduce
+const totalPrecios = Libros.reduce((sumador, libro) => sumador + (libro.precio * 1.21), 0);
+alert("La compra de los tres libros disponibles\nDa un total de $"+totalPrecios+" Con Iva incluido");
+
+
+
+const libros = ["Descubre y dejate descubrir" , "descubre y dejate descubrir"];
+
+let disponible = libros.indexOf ("Descubre y dejate descubrir" , "descubre y dejate descubrir")
+
+let nombreLibro = prompt("Ingresa el nombre del libro a comprar");
+disponible = libros.indexOf(nombreLibro);
+
+if(disponible !=-1){
+    alert("El libro, Descubre y dejate descubrir se encuentra disponible");
+}else{
+    alert("No tenemos disponible ese libro. Sin stock");
+}
+
+
+
 
