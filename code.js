@@ -5,7 +5,7 @@ if(
     //alert - salida de datos 
     alert ("Tenemos registrados tus datos " +nombre);
     }else{
-    if(nombre, email==""){
+    if(nombre, email===""){
     alert("No tenemos datos registrados")
 }
 }
@@ -14,12 +14,12 @@ if(
 for (let i=1; i<=3; i++){ 
     let edadAutor= parseInt(prompt("¿Cuantos años tiene el autor?"));
     let pais = prompt ("¿En que pais nacio el autor?");
-    if ((edadAutor == "23") && (pais == "Argentina" || pais=="argentina")){
+    if ((edadAutor === "23") && (pais === "Argentina" || pais==="argentina")){
         alert ("Conoces al Autor!!");
         break;
     }else{
         alert ("Edad y/o pais son incorrectos, restan "+(3-i)+" intentos");
-    }if(i==3){
+    }if(i===3){
         alert("No conoces al Autor");
         break;
     }
@@ -106,7 +106,7 @@ let disponible = libros.indexOf ("Descubre y dejate descubrir" , "descubre y dej
 let nombreLibro = prompt("Ingresa el nombre del libro a comprar");
 disponible = libros.indexOf(nombreLibro);
 
-if(disponible !=-1){
+if(disponible !==-1){
     alert("El libro, Descubre y dejate descubrir se encuentra disponible");
 }else{
     alert("No tenemos disponible ese libro. Sin stock");
