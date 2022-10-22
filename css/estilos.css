@@ -1432,23 +1432,40 @@ form label input {
 
 
 /*carrito*/
+.card{
+  margin-left: 2px;
+  margin-top: 2px;
+}
 .h3-carrito{
   color: white;
+  margin-left: 5px;
 }
 
 .table{
   color: white;
+  margin-left: 5px;
+  width: 95%;
 }
+
 
 #total{
   color: white;
+  margin-left: 5px;
+  margin-bottom: 30px;
 }
 
 #tablabody{
   color: #fff;
 }
 
+.td-comprar{
+  color: white;
+}
 
+
+.table-striped{
+  color: white;
+}
 
 
 /*# sourceMappingURL=estilos.css.map */
