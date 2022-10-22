@@ -1431,4 +1431,24 @@ form label input {
 }
 
 
+/*carrito*/
+.h3-carrito{
+  color: white;
+}
+
+.table{
+  color: white;
+}
+
+#total{
+  color: white;
+}
+
+#tablabody{
+  color: #fff;
+}
+
+
+
+
 /*# sourceMappingURL=estilos.css.map */
