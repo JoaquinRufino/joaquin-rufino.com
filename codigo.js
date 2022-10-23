@@ -24,14 +24,12 @@ function renderizarTarjetas(){
         agregarAlCarrito(libro);
     });
     })
-    
 }
     
     renderizarTarjetas();
     
-    
-    
-   /* let comprar = document.getElementsByClassName("btn-primary");
+    /*
+    let comprar = document.getElementsByClassName("btn-primary");
     comprar.onmouseover = () => {
         //de esta forma le cambiamos el color al boton cuando pasamos por arriba
         comprar.className="btn btn-success";
@@ -69,7 +67,6 @@ let modo = localStorage.getItem("modo");
 if(modo !=null){
     document.body.className=modo;
     principal.className="p-3 "+modo;
-    
     if(modo=="dark"){
         boton.innerText="Light mode";
     }else{
