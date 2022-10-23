@@ -1432,10 +1432,14 @@ form label input {
 
 
 /*carrito*/
+.card-body{
+  color: black;
+}
 .card{
   margin-left: 2px;
   margin-top: 2px;
 }
+
 .h3-carrito{
   color: white;
   margin-left: 5px;
@@ -1446,7 +1450,6 @@ form label input {
   margin-left: 5px;
   width: 95%;
 }
-
 
 #total{
   color: white;
@@ -1465,6 +1468,36 @@ form label input {
 
 .table-striped{
   color: white;
+}
+
+#cuerpo{
+background-color: black;
+background-repeat: no-repeat;
+background-image: none;
+font-size: 20px;
+margin: 0;
+padding: 0;
+}
+
+.btn{
+  color: white;
+}
+
+  .Dark{
+    background-color: black;
+    color: black;
+}
+
+.light{
+  background-image: url(../assets/brackground/chalo-gallardo-kW-yPqdm8Fs-optimizada.jpg);
+    color: black;
+    background-size: cover;
+    
+}
+
+.button{
+    display: flex;
+    justify-content: center;
 }
 
 
