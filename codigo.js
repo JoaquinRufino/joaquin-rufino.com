@@ -29,16 +29,18 @@ function renderizarTarjetas(){
     
     renderizarTarjetas();
     
-    /*
-    boton.onmouseover = () => {
+    
+    
+   /* let comprar = document.getElementsByClassName("btn-primary");
+    comprar.onmouseover = () => {
         //de esta forma le cambiamos el color al boton cuando pasamos por arriba
-        boton.className="btn btn-success";
+        comprar.className="btn btn-success";
     }
-    boton.onmouseout = () => {
+    comprar.onmouseout = () => {
         //de esta forma le devolvemos el color original al boton cuando salimos de arriba con el mouse
-        boton.className="btn btn-primary";
-    }
-*/
+        comprar.className="btn btn-primary";
+    }*/
+
 
 function agregarAlCarrito(libroComprado){
     carrito.push(libroComprado);
@@ -66,7 +68,8 @@ let modo = localStorage.getItem("modo");
 //primer renderizado, con esto cuando ingreses esta el modo que indicaste
 if(modo !=null){
     document.body.className=modo;
-    cuerpo.className="pt-0 mt-0 mb-0 m-0 p-0 "+modo;
+    principal.className="p-3 "+modo;
+    
     if(modo=="dark"){
         boton.innerText="Light mode";
     }else{
