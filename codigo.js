@@ -29,14 +29,14 @@ function renderizarTarjetas(){
     renderizarTarjetas();
     
     /*
-    let comprar = document.getElementsByClassName("btn-primary");
-    comprar.onmouseover = () => {
+    const btn = document.getElementById("btn");
+    btn.onmouseover = () => {
         //de esta forma le cambiamos el color al boton cuando pasamos por arriba
-        comprar.className="btn btn-success";
+        btn.className="btn-success";
     }
-    comprar.onmouseout = () => {
+    btn.onmouseout = () => {
         //de esta forma le devolvemos el color original al boton cuando salimos de arriba con el mouse
-        comprar.className="btn btn-primary";
+        btn.className="btn-primary";
     }*/
 
 
