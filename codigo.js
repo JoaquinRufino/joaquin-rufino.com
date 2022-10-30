@@ -4,6 +4,8 @@ let carrito = [];
 let totalCarrito;
 let contenedor= document.getElementById("tarjetas");
 let botonFinalizar = document.getElementById("finalizar");
+const DateTime = luxon.DateTime;
+let ahora = DateTime.now();
 
 function renderizarTarjetas(){
     for(const libro of fotoLibro){
@@ -59,6 +61,8 @@ function agregarAlCarrito(libroComprado){
 }
 
 botonFinalizar.onclick = () =>{
+    let ahora = DateTime.now();
+    console.log("Realizaste tu compra el dia: "+ahora.toLocaleString(DateTime.DATETIME_SHORT));
     carrito = [];
     document.getElementById("tablabody").innerHTML="";
     document.getElementById("total").innerText = "Total a pagar: $";
