@@ -55,6 +55,12 @@ function agregarAlCarrito(libroComprado){
     document.getElementById("total").innerText = "Total a pagar: $"+totalCarrito;
 }
 
+/*
+let carro= JSON.parse(localStorage.getItem("carrito")) || "El carrito esta vacio";
+console.log(carro);
+*/
+
+
 
 // dark/light mode
 const boton = document.getElementById("mode");
