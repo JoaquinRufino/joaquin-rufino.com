@@ -1,8 +1,9 @@
 //eventos
 //esto funcionara con un solo producto, si utiizas mas habra algunas variantes
-const carrito = [];
+let carrito = [];
 let totalCarrito;
 let contenedor= document.getElementById("tarjetas");
+let botonFinalizar = document.getElementById("finalizar");
 
 function renderizarTarjetas(){
     for(const libro of fotoLibro){
@@ -28,17 +29,6 @@ function renderizarTarjetas(){
     
     renderizarTarjetas();
     
-    /*
-    const btn = document.getElementById("btn");
-    btn.onmouseover = () => {
-        //de esta forma le cambiamos el color al boton cuando pasamos por arriba
-        btn.className="btn-success";
-    }
-    btn.onmouseout = () => {
-        //de esta forma le devolvemos el color original al boton cuando salimos de arriba con el mouse
-        btn.className="btn-primary";
-    }*/
-
 
 function agregarAlCarrito(libroComprado){
     carrito.push(libroComprado);
@@ -66,6 +56,12 @@ function agregarAlCarrito(libroComprado){
     `;
     totalCarrito = carrito.reduce((acumulador,libro)=> acumulador + libro.precio, 0);
     document.getElementById("total").innerText = "Total a pagar: $"+totalCarrito;
+}
+
+botonFinalizar.onclick = () =>{
+    carrito = [];
+    document.getElementById("tablabody").innerHTML="";
+    document.getElementById("total").innerText = "Total a pagar: $";
 }
 
 /*
