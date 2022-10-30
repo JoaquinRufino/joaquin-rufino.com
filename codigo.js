@@ -43,7 +43,20 @@ function renderizarTarjetas(){
 function agregarAlCarrito(libroComprado){
     carrito.push(libroComprado);
     console.table(carrito);
-    alert(`${libroComprado.nombre} agregado al carrito!!`);
+    //alert(`${libroComprado.nombre} agregado al carrito!!`);
+    //sweet alert 
+    Swal.fire({
+        title:libroComprado.nombre,
+        text: 'Agregado al Carrito!!',
+        icon: 'success',
+        imageWidth: 200,
+        imageHeight: 120,
+        showConfirmButton: false,
+        timer: 1500,
+        background:"black",
+        color:"white",
+        imageAlt:libroComprado.nombre,
+    })
     document.getElementById("tablabody").innerHTML += `
         <tr>
             <td class="td-comprar">${libroComprado.Isbn}</td>
