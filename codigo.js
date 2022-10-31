@@ -74,7 +74,6 @@ console.log(carro);
 */
 
 
-
 // dark/light mode
 const boton = document.getElementById("mode");
 const cuerpo = document.getElementById("cuerpo")
