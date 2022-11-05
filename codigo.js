@@ -1,5 +1,4 @@
 //eventos
-//esto funcionara con un solo producto, si utiizas mas habra algunas variantes
 let carrito = [];
 let totalCarrito;
 let contenedor= document.getElementById("tarjetas");
@@ -24,7 +23,7 @@ function renderizarTarjetas(){
     fotoLibro.forEach(libro => {
     //evento para cada boton que pondre
     document.getElementById(`btn${libro.Isbn}`).addEventListener("click",function (){
-        agregarAlCarrito(libro);
+        agregarAlCarrito(libro); 
     });
     })
 }
@@ -68,10 +67,6 @@ botonFinalizar.onclick = () =>{
     document.getElementById("total").innerText = "Total a pagar: $";
 }
 
-/*
-let carro= JSON.parse(localStorage.getItem("carrito")) || "El carrito esta vacio";
-console.log(carro);
-*/
 
 
 // dark/light mode
