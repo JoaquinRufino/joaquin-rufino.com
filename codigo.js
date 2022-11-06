@@ -29,7 +29,19 @@ function renderizarTarjetas(){
 }
     
     renderizarTarjetas();
-    
+ /*   
+//get a json local
+function datosJson(){
+    const URLJSON=".//datos.json";
+    fetch(URLJSON)
+    .then(respuesta => respuesta.json())
+    .then(informacion => console.log(informacion.fotoLibro));
+}
+
+datosJson();
+*/
+
+
 
 function agregarAlCarrito(libroComprado){
     carrito.push(libroComprado);
