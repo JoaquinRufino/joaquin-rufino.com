@@ -93,9 +93,9 @@ if(modo !=null){
     document.body.className=modo;
     principal.className="p-3 "+modo;
     if(modo=="dark"){
-        boton.innerText="Light mode";
+        boton.innerText="☀️";
     }else{
-        boton.innerText="Dark mode";
+        boton.innerText="🌙";
     }
 }else{
     modo="dark";
@@ -109,13 +109,13 @@ boton.onclick = () => {
         //luego agregamos la que queremos
         principal.classList.remove("dark");
         principal.classList.add("light");
-        boton.innerText="Dark mode";
+        boton.innerText="🌙";
         modo="light";
     }else{
         document.body.className="dark";
         principal.classList.remove("light");
         principal.classList.add("dark");
-        boton.innerText="Light mode";
+        boton.innerText="☀️";
         modo="dark";
     }
     localStorage.setItem("modo", modo);
