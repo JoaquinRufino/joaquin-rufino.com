@@ -28,20 +28,26 @@ function renderizarTarjetas(){
     }
     //eventos
     productosJSON.forEach(libro => {
-    //evento para cada boton que pondre
-    document.getElementById(`btn${libro.Isbn}`).addEventListener("click",function (){
-        agregarAlCarrito(libro); 
-    });
-  })
+        //evento para cada boton que pondre
+        document.getElementById(`btn${libro.Isbn}`).addEventListener("click",function (){
+            agregarAlCarrito(libro); 
+        });
+    })
 }
 
-//renderizarTarjetas();
+
+    fetch("../productos.json")
+    .then(data => data.json())
+    .then(json => {
+        productosJSON = json
+        renderizarTarjetas()
+    })
+
 
 
 (carrito.length != 0)&&agregarAlCarrito();
 
 function agregarAlCarrito(){
-    for (const libroComprado of carrito){
     carrito.push(libroComprado);
     console.table(carrito);
     //alert(`${libroComprado.nombre} agregado al carrito!!`);
@@ -71,7 +77,7 @@ function agregarAlCarrito(){
     document.getElementById("total").innerText = "Total a pagar: $"+totalCarrito;
     localStorage.setItem("carrito", JSON.stringify(carrito));
 
-}
+
 
 botonFinalizar.onclick = () =>{
     let ahora = DateTime.now();
@@ -100,15 +106,6 @@ function eliminar(ev) {
 }
 
 
-async function obtenerJSON() {
-    const URLJSON = "productos.json";
-    const resp = await fetch(URLJSON);
-    const dato = await resp.json();
-    productosJSON = dato;
-    
-    // renderizo las cartas
-    //renderizarTarjetas();
-}
 
 
 
@@ -124,7 +121,7 @@ if(modo !=null){
     document.body.className=modo;
     principal.className="p-3 "+modo;
     if(modo=="dark"){
-        boton.innerText="☀️";
+        boton.innerText="🔅";
     }else{
         boton.innerText="🌙";
     }
@@ -146,7 +143,7 @@ boton.onclick = () => {
         document.body.className="dark";
         principal.classList.remove("light");
         principal.classList.add("dark");
-        boton.innerText="☀️";
+        boton.innerText="🔅";
         modo="dark";
     }
     localStorage.setItem("modo", modo);
