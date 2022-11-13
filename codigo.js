@@ -2,15 +2,20 @@
 let productosJSON = [];
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
+fetch("../productos.json")
+    .then(data => data.json())
+    .then(json => {
+        productosJSON = json
+        renderizarTarjetas()
+    })
+
 
 let totalCarrito;
 let contenedor= document.getElementById("tarjetas");
 let botonFinalizar = document.getElementById("finalizar");
 
-
 const DateTime = luxon.DateTime;
 let ahora = DateTime.now();
-
 
 
 function renderizarTarjetas(){
@@ -36,18 +41,9 @@ function renderizarTarjetas(){
 }
 
 
-    fetch("../productos.json")
-    .then(data => data.json())
-    .then(json => {
-        productosJSON = json
-        renderizarTarjetas()
-    })
+//(carrito.length != 0)&&agregarAlCarrito(libroComprado);
 
-
-
-(carrito.length != 0)&&agregarAlCarrito();
-
-function agregarAlCarrito(){
+function agregarAlCarrito(libroComprado){
     carrito.push(libroComprado);
     console.table(carrito);
     //alert(`${libroComprado.nombre} agregado al carrito!!`);
@@ -72,10 +68,11 @@ function agregarAlCarrito(){
             <td><button class="btn btn-light" onclick="eliminar(event)">🗑️</button></td>
         </tr>
     `;
-    }
-    totalCarrito = carrito.reduce((acumulador,libro)=> acumulador + libro.precio, 0);
+    totalCarrito = carrito.reduce((acumulador,libro)=> acumulador + libro.precio,0);
     document.getElementById("total").innerText = "Total a pagar: $"+totalCarrito;
     localStorage.setItem("carrito", JSON.stringify(carrito));
+}
+
 
 
 
@@ -99,12 +96,11 @@ function eliminar(ev) {
     //remueve la fila de la tabla
     fila.remove();
     //recalcular el total
-    let totalCarrito = carrito.reduce((acumulador, libro) => acumulador + libro.precio, 0);
-    total.innerText = "Total a pagar $: " + totalCarrito;
+    let totalCarritoCalculado = carrito.reduce((acumulador, libro) => acumulador + libro.precio, 0);
+    total.innerText = "Total a pagar $: "+totalCarritoCalculado;
     //storage
     localStorage.setItem("carrito", JSON.stringify(carrito));
 }
-
 
 
 
