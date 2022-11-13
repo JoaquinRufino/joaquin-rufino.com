@@ -2,6 +2,7 @@
 let productosJSON = [];
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
+//fetch para acceder a json
 fetch("../productos.json")
     .then(data => data.json())
     .then(json => {
@@ -33,7 +34,7 @@ function renderizarTarjetas(){
     }
     //eventos
     productosJSON.forEach(libro => {
-        //evento para cada boton que pondre
+        //evento para cada boton 
         document.getElementById(`btn${libro.Isbn}`).addEventListener("click",function (){
             agregarAlCarrito(libro); 
         });
@@ -41,11 +42,10 @@ function renderizarTarjetas(){
 }
 
 
-//(carrito.length != 0)&&agregarAlCarrito(libroComprado);
 
 function agregarAlCarrito(libroComprado){
     carrito.push(libroComprado);
-    console.table(carrito);
+    //console.table(carrito);
     //alert(`${libroComprado.nombre} agregado al carrito!!`);
     //sweet alert 
     Swal.fire({
@@ -60,30 +60,58 @@ function agregarAlCarrito(libroComprado){
         color:"white",
         imageAlt:libroComprado.nombre,
     })
-    document.getElementById("tablabody").innerHTML += `
-        <tr>
-            <td class="td-comprar">${libroComprado.Isbn}</td>
-            <td class="td-comprar">${libroComprado.nombre}</td>
-            <td class="td-comprar">$ ${libroComprado.precio}</td>
-            <td><button class="btn btn-light" onclick="eliminar(event)">🗑️</button></td>
-        </tr>
-    `;
-    totalCarrito = carrito.reduce((acumulador,libro)=> acumulador + libro.precio,0);
-    document.getElementById("total").innerText = "Total a pagar: $"+totalCarrito;
+    renderizarCarrito()
     localStorage.setItem("carrito", JSON.stringify(carrito));
 }
 
+const renderizarCarrito = () =>{
+    //vaciamos el carrito del html para que no se duplique
+    document.getElementById("tablabody").innerHTML="";
+    carrito.forEach(libroComprado =>{
+        document.getElementById("tablabody").innerHTML += `
+        <tr>
+        <td class="td-comprar">${libroComprado.Isbn}</td>
+        <td class="td-comprar">${libroComprado.nombre}</td>
+        <td class="td-comprar">$ ${libroComprado.precio}</td>
+        <td class=td-boton><button class="btn btn-light" onclick="eliminar(event)">🗑️</button></td>
+        </tr>
+        `;
+    })
+    totalCarrito = carrito.reduce((acumulador,libro)=> acumulador + libro.precio,0);
+    document.getElementById("total").innerText = "Total a pagar: $"+totalCarrito;
+}
+
+//llamamos a la funcion renderizarcarrito
+renderizarCarrito();
 
 
-
+//boton para finalizar compra
 botonFinalizar.onclick = () =>{
+    if(carrito.length==0){
+        Swal.fire({
+            title:'El carrito esta Vacio',
+            icon: 'error',
+            showConfirmButton: false,
+            timer: 1500,
+            background:"black",
+            color:"white",
+            width: 400,
+        })
+    }else{
     let ahora = DateTime.now();
     console.log("Realizaste tu compra el dia: "+ahora.toLocaleString(DateTime.DATETIME_SHORT));
     carrito = [];
     document.getElementById("tablabody").innerHTML="";
     document.getElementById("total").innerText = "Total a pagar: $";
+    //localStorage removeItem para vaciar el carrito cuando se finalice la compra y se vuelva a ingresar
+    localStorage.removeItem("carrito");
+    
+    //Indicacion para recibir ayuda de la Profe👇
+    //Me gustaria una indicacion si en esta parte lo adecuado es sacar el console del horario de la compra
+    //de reemplazo podria poner un sweet alert que diga pendiente y compra realizada
+    //o deberia realizar un remove para que el console no se agregue a la anterior compra?
 }
-
+}
 
 //para eliminar productos del carrito 
 function eliminar(ev) {
@@ -92,7 +120,7 @@ function eliminar(ev) {
     let indice = carrito.findIndex(libro => libro.Isbn == Isbn);
     //remueve el producto del carro
     carrito.splice(indice, 1);
-    console.table(carrito);
+    //console.table(carrito);
     //remueve la fila de la tabla
     fila.remove();
     //recalcular el total
@@ -101,7 +129,6 @@ function eliminar(ev) {
     //storage
     localStorage.setItem("carrito", JSON.stringify(carrito));
 }
-
 
 
 
