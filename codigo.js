@@ -42,7 +42,6 @@ function renderizarTarjetas(){
 }
 
 
-
 function agregarAlCarrito(libroComprado){
     carrito.push(libroComprado);
     //console.table(carrito);
