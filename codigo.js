@@ -98,6 +98,15 @@ botonFinalizar.onclick = () =>{
             width: 400,
         })
     }else{
+        Swal.fire({
+            title:'¡¡Compra realizada!!',
+            icon:  'success',
+            showConfirmButton: false,
+            timer: 1500,
+            background:"black",
+            color:"white",
+            width: 450,
+        })
     let ahora = DateTime.now();
     console.log("Realizaste tu compra el dia: "+ahora.toLocaleString(DateTime.DATETIME_SHORT));
     carrito = [];
@@ -106,10 +115,6 @@ botonFinalizar.onclick = () =>{
     //localStorage removeItem para vaciar el carrito cuando se finalice la compra y se vuelva a ingresar
     localStorage.removeItem("carrito");
     
-    //Indicacion para recibir ayuda de la Profe👇
-    //Me gustaria una indicacion si en esta parte lo adecuado es sacar el console del horario de la compra
-    //de reemplazo podria poner un sweet alert que diga pendiente y compra realizada
-    //o deberia realizar un remove para que el console no se agregue a la anterior compra?
 }
 }
 
