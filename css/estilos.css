@@ -290,7 +290,7 @@ align-items: center;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 240px;
+    width: 220px;
     margin-right: 0px;
   }
   .footer-logo {
@@ -504,7 +504,7 @@ main h1 {
     font-family: "Merriweather", serif;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 840px) {
   main h1 {
     color: white;
     text-align: center;
@@ -555,8 +555,8 @@ main h1 {
     background-color: black;
   }
   .tarjeta__imagen {
-    width: 550px;
-    height: 350px;
+    width: 100%;
+    height: 100%;
     margin-bottom: 20px;
   }
   .tarjeta {
