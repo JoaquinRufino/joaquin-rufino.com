@@ -1462,12 +1462,18 @@ form {
   margin-right: 40px;
 }
 
+
 form label {
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 10px;
   color: white;
+}
+
+label::after{
+  content: " *";
+color: red;
 }
 
 form label input {
