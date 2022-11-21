@@ -176,5 +176,3 @@ boton.onclick = () => {
     localStorage.setItem("modo", modo);
 }
 
-
-
